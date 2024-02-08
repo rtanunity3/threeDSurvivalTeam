@@ -1,0 +1,1579 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &168398479357327392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3414934916878135538}
+  m_Layer: 0
+  m_Name: DeerDoe_ R Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3414934916878135538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168398479357327392}
+  m_LocalRotation: {x: 0.72637343, y: -0.04455892, z: 0.0521955, w: 0.68386537}
+  m_LocalPosition: {x: -0.26100552, y: -0.00000000654074, z: 0.000000009440247}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3510522832077034201}
+  m_Father: {fileID: 8450777838806489567}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -79.99429, y: -85.215614, z: -92.74275}
+--- !u!1 &276993033165116586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3365083593391424864}
+  m_Layer: 0
+  m_Name: DeerDoe_ Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3365083593391424864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276993033165116586}
+  m_LocalRotation: {x: -0.0000000144869725, y: -0.00000019184479, z: 0.06662806, w: 0.9977779}
+  m_LocalPosition: {x: -0.183981, y: 0.004110198, z: 0.000000007981623}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7052310443148493687}
+  m_Father: {fileID: 4382267316300123885}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0.9207389, y: 0.8922133, z: -21.757702}
+--- !u!1 &362246986880674317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7038625871590435917}
+  m_Layer: 0
+  m_Name: DeerDoe_ R HorseLink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7038625871590435917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362246986880674317}
+  m_LocalRotation: {x: -0.000000048655608, y: 0.00000002374151, z: -0.5442536, w: 0.83892083}
+  m_LocalPosition: {x: -0.26341125, y: 0.0000000087985335, z: 0.000000014624717}
+  m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3707029383841926394}
+  m_Father: {fileID: 2002808134338296170}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -172.01381}
+--- !u!1 &766275193584049970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6215046735393274350}
+  m_Layer: 0
+  m_Name: DeerDoe_ L Thigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6215046735393274350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766275193584049970}
+  m_LocalRotation: {x: 0.7291731, y: -0.6764424, z: -0.052886736, w: 0.08908001}
+  m_LocalPosition: {x: 0.20851007, y: 0.0003985992, z: 0.16132663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7235560977516277041}
+  m_Father: {fileID: 7131480724908158155}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 6.99605, y: 176.68695, z: -147.29187}
+--- !u!1 &855942349746857153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3395108843966331291}
+  m_Layer: 0
+  m_Name: DeerDoe_ L UpperArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3395108843966331291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855942349746857153}
+  m_LocalRotation: {x: -0.46568787, y: -0.66669387, z: 0.14170234, w: 0.5644241}
+  m_LocalPosition: {x: -0.13100743, y: 0.000000017109773, z: 0.000000024524672}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2542385216257828896}
+  m_Father: {fileID: 12847277365372797}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 15.964605, y: -99.78331, z: 60.568672}
+--- !u!1 &995299161011935431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 336047692918078781}
+  m_Layer: 0
+  m_Name: DeerDoe_ Tail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &336047692918078781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995299161011935431}
+  m_LocalRotation: {x: 0.0000010325342, y: -0.0000008007586, z: 0.9851221, w: -0.171856}
+  m_LocalPosition: {x: 0.21456277, y: -0.11663294, z: 0.00000004764333}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6477261540977329270}
+  m_Father: {fileID: 2266875412830411073}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -0.97071916, y: 2.7305493, z: -127.07766}
+--- !u!1 &1020916231883077885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8405581610843826075}
+  m_Layer: 0
+  m_Name: DeerDoe_ R Clavicle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8405581610843826075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020916231883077885}
+  m_LocalRotation: {x: 0.7789945, y: -0.12933892, z: 0.58904296, w: -0.1716608}
+  m_LocalPosition: {x: -0.33043918, y: 0.00036462667, z: -0.03829354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 456667693530847952}
+  m_Father: {fileID: 2606980309056116846}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -0.16921307, y: 89.47117, z: 166.84439}
+--- !u!1 &1026510260267591325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6477261540977329270}
+  m_Layer: 0
+  m_Name: DeerDoe_ Tail1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6477261540977329270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026510260267591325}
+  m_LocalRotation: {x: -0.000000072830915, y: -0.000000615488, z: 0.284509, w: 0.95867336}
+  m_LocalPosition: {x: -0.07354215, y: -0.000057425732, z: -1.5129051e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5340746033105043321}
+  m_Father: {fileID: 336047692918078781}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0.104885824, y: -0.7476196, z: 31.112593}
+--- !u!1 &1303404329558188480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5340746033105043321}
+  m_Layer: 0
+  m_Name: DeerDoe_ Tail2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5340746033105043321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303404329558188480}
+  m_LocalRotation: {x: 0.000000013518568, y: -0.00000035511374, z: 0.1323044, w: 0.99120915}
+  m_LocalPosition: {x: -0.08603622, y: -0.00014779197, z: -3.953779e-10}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6477261540977329270}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0.10810705, y: -0.6519115, z: 13.081096}
+--- !u!1 &1386721246959124891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4382267316300123885}
+  m_Layer: 0
+  m_Name: DeerDoe_ Neck2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4382267316300123885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386721246959124891}
+  m_LocalRotation: {x: -0.000000012574323, y: -0.0000003386926, z: 0.118748486, w: 0.9929244}
+  m_LocalPosition: {x: -0.1861217, y: -0.00014405452, z: -4.0916112e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3365083593391424864}
+  m_Father: {fileID: 1571272794588772566}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -0.015798397, y: 0.30716792, z: 21.937141}
+--- !u!1 &2063466706115200750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1593702912096564171}
+  m_Layer: 0
+  m_Name: DeerDoe_ R Thigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1593702912096564171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063466706115200750}
+  m_LocalRotation: {x: 0.72917295, y: -0.67644256, z: 0.052884474, w: -0.089081705}
+  m_LocalPosition: {x: 0.20851006, y: 0.00039947502, z: -0.16132663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2002808134338296170}
+  m_Father: {fileID: 7131480724908158155}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0.41468933, y: 178.90419, z: -153.04382}
+--- !u!1 &2193936640527523641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2963594372699133696}
+  - component: {fileID: 3632635978157424294}
+  m_Layer: 0
+  m_Name: SK_DeerDoe_LOD3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2963594372699133696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193936640527523641}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4179293708407231167}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &3632635978157424294
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193936640527523641}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6a74abaaef5f63542b57ff15563ff476, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 8613917965698922364, guid: 7ff6315c3f91d114aa88f466d293be33, type: 3}
+  m_Bones:
+  - {fileID: 1634535553292486609}
+  - {fileID: 8106374185483025339}
+  - {fileID: 2266875412830411073}
+  - {fileID: 7131480724908158155}
+  - {fileID: 2606980309056116846}
+  - {fileID: 6918520194880145344}
+  - {fileID: 1571272794588772566}
+  - {fileID: 4382267316300123885}
+  - {fileID: 3365083593391424864}
+  - {fileID: 7052310443148493687}
+  - {fileID: 8405581610843826075}
+  - {fileID: 456667693530847952}
+  - {fileID: 8450777838806489567}
+  - {fileID: 3414934916878135538}
+  - {fileID: 3510522832077034201}
+  - {fileID: 12847277365372797}
+  - {fileID: 3395108843966331291}
+  - {fileID: 2542385216257828896}
+  - {fileID: 554468267349052512}
+  - {fileID: 2825424729914446202}
+  - {fileID: 6215046735393274350}
+  - {fileID: 7235560977516277041}
+  - {fileID: 5156373653090622529}
+  - {fileID: 7536608117117155116}
+  - {fileID: 1593702912096564171}
+  - {fileID: 2002808134338296170}
+  - {fileID: 7038625871590435917}
+  - {fileID: 3707029383841926394}
+  - {fileID: 336047692918078781}
+  - {fileID: 6477261540977329270}
+  - {fileID: 5340746033105043321}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1634535553292486609}
+  m_AABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_DirtyAABB: 0
+--- !u!1 &2208394985698552112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4179293708407231167}
+  m_Layer: 0
+  m_Name: SK_DeerDoe_LodGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4179293708407231167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2208394985698552112}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2586255827589785071}
+  - {fileID: 4632850155053097912}
+  - {fileID: 7856792651754441258}
+  - {fileID: 2963594372699133696}
+  m_Father: {fileID: 4062072874270281934}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2496501134455429402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571272794588772566}
+  m_Layer: 0
+  m_Name: DeerDoe_ Neck1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1571272794588772566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2496501134455429402}
+  m_LocalRotation: {x: -0.0000000085872705, y: -0.0000006448215, z: 0.22779559, w: 0.973709}
+  m_LocalPosition: {x: -0.18609089, y: -0.00013280913, z: -3.7467396e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4382267316300123885}
+  m_Father: {fileID: 6918520194880145344}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -0.04065578, y: 0.30680543, z: 14.848032}
+--- !u!1 &2789434564139154942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2825424729914446202}
+  m_Layer: 0
+  m_Name: DeerDoe_ L Finger0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2825424729914446202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2789434564139154942}
+  m_LocalRotation: {x: -0.00038062382, y: -0.29047137, z: 0.000115507, w: 0.95688367}
+  m_LocalPosition: {x: -0.30121154, y: 0.0000000034351164, z: 0.0000000142100145}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 554468267349052512}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -0.5400715, y: 4.741562, z: 0.44335857}
+--- !u!1 &2979205840562066896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7052310443148493687}
+  m_Layer: 0
+  m_Name: DeerDoe_ Ponytail1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7052310443148493687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2979205840562066896}
+  m_LocalRotation: {x: -0.000000116252, y: 0.0000018880748, z: -0.68130004, w: 0.7320043}
+  m_LocalPosition: {x: -0.00463689, y: -0.011665621, z: -0.0000000985675}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3365083593391424864}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0.00013173463, y: 0.000156974, z: -79.64104}
+--- !u!1 &3001766924284285944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 12847277365372797}
+  m_Layer: 0
+  m_Name: DeerDoe_ L Clavicle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &12847277365372797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3001766924284285944}
+  m_LocalRotation: {x: 0.7789949, y: -0.12933725, z: -0.5890434, w: 0.1716587}
+  m_LocalPosition: {x: -0.33043918, y: 0.00036441872, z: 0.03829354}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3395108843966331291}
+  m_Father: {fileID: 2606980309056116846}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0.1944421, y: -89.37401, z: 166.62328}
+--- !u!1 &3431340966547096438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2002808134338296170}
+  m_Layer: 0
+  m_Name: DeerDoe_ R Calf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2002808134338296170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431340966547096438}
+  m_LocalRotation: {x: 0.0000002386021, y: -0.00000011288396, z: 0.48682815, w: 0.8734978}
+  m_LocalPosition: {x: -0.3165076, y: 0.000000008245873, z: -0.000000007192418}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7038625871590435917}
+  m_Father: {fileID: 1593702912096564171}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0.000001770346, y: -0.000004051844, z: 137.20328}
+--- !u!1 &3811748799461961652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554468267349052512}
+  m_Layer: 0
+  m_Name: DeerDoe_ L Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &554468267349052512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3811748799461961652}
+  m_LocalRotation: {x: -0.7263737, y: 0.044558883, z: 0.052195534, w: 0.6838651}
+  m_LocalPosition: {x: -0.26100552, y: -0.00000001917634, z: -0.000000002650072}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2825424729914446202}
+  m_Father: {fileID: 2542385216257828896}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 77.89335, y: 120.45855, z: -47.180706}
+--- !u!1 &3927343303161579322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3707029383841926394}
+  m_Layer: 0
+  m_Name: DeerDoe_ R Foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3707029383841926394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3927343303161579322}
+  m_LocalRotation: {x: -0.0110113695, y: 0.029125316, z: 0.106257126, w: 0.99385107}
+  m_LocalPosition: {x: -0.34177935, y: 0.00000004749705, z: -0.000000008236154}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7038625871590435917}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 25.580818, y: -3.6053643, z: 48.079575}
+--- !u!1 &4350228292348119975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8106374185483025339}
+  m_Layer: 0
+  m_Name: DeerDoe_
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8106374185483025339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4350228292348119975}
+  m_LocalRotation: {x: 0.49740157, y: -0.49738297, z: 0.5026036, w: 0.5025849}
+  m_LocalPosition: {x: -0, y: 0.47, z: 0.90099996}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2266875412830411073}
+  m_Father: {fileID: 1634535553292486609}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 85.89649, y: -1.5326055, z: 88.61734}
+--- !u!1 &5168259944942385246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 456667693530847952}
+  m_Layer: 0
+  m_Name: DeerDoe_ R UpperArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &456667693530847952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168259944942385246}
+  m_LocalRotation: {x: 0.46568793, y: 0.6666939, z: 0.14170228, w: 0.564424}
+  m_LocalPosition: {x: -0.13100743, y: 0.000000033353533, z: -0.0000000034766947}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8450777838806489567}
+  m_Father: {fileID: 8405581610843826075}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -12.577054, y: 86.298676, z: 63.949097}
+--- !u!1 &5677406291377346898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8450777838806489567}
+  m_Layer: 0
+  m_Name: DeerDoe_ R Forearm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8450777838806489567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5677406291377346898}
+  m_LocalRotation: {x: -0.00000028985573, y: -0.00000007383618, z: 0.3278909, w: 0.9447156}
+  m_LocalPosition: {x: -0.26543564, y: -0.00000001464051, z: -0.000000002218187}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3414934916878135538}
+  m_Father: {fileID: 456667693530847952}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -0.000012358292, y: 0.0000022039585, z: 93.24197}
+--- !u!1 &5732461595822005037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2606980309056116846}
+  m_Layer: 0
+  m_Name: DeerDoe_ Spine1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2606980309056116846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732461595822005037}
+  m_LocalRotation: {x: -7.3181e-41, y: 8.437242e-23, z: 8.6736174e-19, w: 1}
+  m_LocalPosition: {x: -0.29262036, y: -0.00023307395, z: -6.5695965e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 12847277365372797}
+  - {fileID: 6918520194880145344}
+  - {fileID: 8405581610843826075}
+  m_Father: {fileID: 7131480724908158155}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -2.3729136, y: -0.5506291, z: 13.201158}
+--- !u!1 &6960490176416542693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1634535553292486609}
+  m_Layer: 0
+  m_Name: root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1634535553292486609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6960490176416542693}
+  m_LocalRotation: {x: 3.061617e-17, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8106374185483025339}
+  m_Father: {fileID: 4062072874270281934}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &7001841223775877784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2542385216257828896}
+  m_Layer: 0
+  m_Name: DeerDoe_ L Forearm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2542385216257828896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7001841223775877784}
+  m_LocalRotation: {x: -0.00000003227279, y: 0.00000000473419, z: 0.32789087, w: 0.9447156}
+  m_LocalPosition: {x: -0.26543567, y: 6.4436123e-10, z: -5.6540383e-10}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 554468267349052512}
+  m_Father: {fileID: 3395108843966331291}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0.0000101570295, y: 0.0000007482554, z: 93.71458}
+--- !u!1 &7572190267007069711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7856792651754441258}
+  - component: {fileID: 1491065040253581847}
+  m_Layer: 0
+  m_Name: SK_DeerDoe_LOD2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7856792651754441258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7572190267007069711}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4179293708407231167}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &1491065040253581847
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7572190267007069711}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6a74abaaef5f63542b57ff15563ff476, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4176858916653869713, guid: 7ff6315c3f91d114aa88f466d293be33, type: 3}
+  m_Bones:
+  - {fileID: 1634535553292486609}
+  - {fileID: 8106374185483025339}
+  - {fileID: 2266875412830411073}
+  - {fileID: 7131480724908158155}
+  - {fileID: 2606980309056116846}
+  - {fileID: 6918520194880145344}
+  - {fileID: 1571272794588772566}
+  - {fileID: 4382267316300123885}
+  - {fileID: 3365083593391424864}
+  - {fileID: 7052310443148493687}
+  - {fileID: 8405581610843826075}
+  - {fileID: 456667693530847952}
+  - {fileID: 8450777838806489567}
+  - {fileID: 3414934916878135538}
+  - {fileID: 3510522832077034201}
+  - {fileID: 12847277365372797}
+  - {fileID: 3395108843966331291}
+  - {fileID: 2542385216257828896}
+  - {fileID: 554468267349052512}
+  - {fileID: 2825424729914446202}
+  - {fileID: 6215046735393274350}
+  - {fileID: 7235560977516277041}
+  - {fileID: 5156373653090622529}
+  - {fileID: 7536608117117155116}
+  - {fileID: 1593702912096564171}
+  - {fileID: 2002808134338296170}
+  - {fileID: 7038625871590435917}
+  - {fileID: 3707029383841926394}
+  - {fileID: 336047692918078781}
+  - {fileID: 6477261540977329270}
+  - {fileID: 5340746033105043321}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1634535553292486609}
+  m_AABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_DirtyAABB: 0
+--- !u!1 &7876933008113305266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7235560977516277041}
+  m_Layer: 0
+  m_Name: DeerDoe_ L Calf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7235560977516277041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876933008113305266}
+  m_LocalRotation: {x: 0.0000001791153, y: -0.00000006567184, z: 0.48682815, w: 0.8734978}
+  m_LocalPosition: {x: -0.3165076, y: 0.000000004858089, z: 0.0000000024079319}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5156373653090622529}
+  m_Father: {fileID: 6215046735393274350}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0.0000029597734, y: -0.0000010077295, z: 142.39513}
+--- !u!1 &7914940646799923894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4062072874270281934}
+  - component: {fileID: 1820993004026458753}
+  - component: {fileID: 3349831092862701289}
+  m_Layer: 0
+  m_Name: SK_DeerDoe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4062072874270281934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7914940646799923894}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -22.083635, y: 21.53708, z: 48.83794}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1634535553292486609}
+  - {fileID: 4179293708407231167}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!205 &1820993004026458753
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7914940646799923894}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.000017672777, y: 0.7345252, z: 0.05186057}
+  m_Size: 1.962739
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.25
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1690394388904731566}
+  - screenRelativeHeight: 0.125
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2253929491955070793}
+  - screenRelativeHeight: 0.0625
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1491065040253581847}
+  - screenRelativeHeight: 0.01
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3632635978157424294}
+  m_Enabled: 1
+--- !u!95 &3349831092862701289
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7914940646799923894}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1786a772528e4fc49ab2295efdc1eb98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &8002868788587327451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7131480724908158155}
+  m_Layer: 0
+  m_Name: DeerDoe_ Spine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7131480724908158155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8002868788587327451}
+  m_LocalRotation: {x: -0.0000020804755, y: 0.0000006936941, z: -0.0003981586, w: 0.99999994}
+  m_LocalPosition: {x: -0.20851035, y: -0.00023299643, z: 0.00000028947468}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6215046735393274350}
+  - {fileID: 1593702912096564171}
+  - {fileID: 2606980309056116846}
+  m_Father: {fileID: 2266875412830411073}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0.9246783, y: 1.5914769, z: -4.1780276}
+--- !u!1 &8176315747400083007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3510522832077034201}
+  m_Layer: 0
+  m_Name: DeerDoe_ R Finger0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3510522832077034201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176315747400083007}
+  m_LocalRotation: {x: 0.00038105692, y: 0.29047137, z: 0.00011568651, w: 0.9568836}
+  m_LocalPosition: {x: -0.30121154, y: -0.0000000048198374, z: -0.000000021076934}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3414934916878135538}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0.54349, y: -5.185414, z: 0.43916345}
+--- !u!1 &8196730797913088872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6918520194880145344}
+  m_Layer: 0
+  m_Name: DeerDoe_ Neck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6918520194880145344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8196730797913088872}
+  m_LocalRotation: {x: -0.0000000014713101, y: -0.0000004827881, z: 0.17117785, w: 0.98524016}
+  m_LocalPosition: {x: -0.29257035, y: -0.00013948091, z: -3.9313588e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1571272794588772566}
+  m_Father: {fileID: 2606980309056116846}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -0.01768148, y: 0.17657076, z: 30.63432}
+--- !u!1 &8331143059520110754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4632850155053097912}
+  - component: {fileID: 2253929491955070793}
+  m_Layer: 0
+  m_Name: SK_DeerDoe_LOD1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4632850155053097912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8331143059520110754}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4179293708407231167}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &2253929491955070793
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8331143059520110754}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6a74abaaef5f63542b57ff15563ff476, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 686273943640442057, guid: 7ff6315c3f91d114aa88f466d293be33, type: 3}
+  m_Bones:
+  - {fileID: 1634535553292486609}
+  - {fileID: 8106374185483025339}
+  - {fileID: 2266875412830411073}
+  - {fileID: 7131480724908158155}
+  - {fileID: 2606980309056116846}
+  - {fileID: 6918520194880145344}
+  - {fileID: 1571272794588772566}
+  - {fileID: 4382267316300123885}
+  - {fileID: 3365083593391424864}
+  - {fileID: 7052310443148493687}
+  - {fileID: 8405581610843826075}
+  - {fileID: 456667693530847952}
+  - {fileID: 8450777838806489567}
+  - {fileID: 3414934916878135538}
+  - {fileID: 3510522832077034201}
+  - {fileID: 12847277365372797}
+  - {fileID: 3395108843966331291}
+  - {fileID: 2542385216257828896}
+  - {fileID: 554468267349052512}
+  - {fileID: 2825424729914446202}
+  - {fileID: 6215046735393274350}
+  - {fileID: 7235560977516277041}
+  - {fileID: 5156373653090622529}
+  - {fileID: 7536608117117155116}
+  - {fileID: 1593702912096564171}
+  - {fileID: 2002808134338296170}
+  - {fileID: 7038625871590435917}
+  - {fileID: 3707029383841926394}
+  - {fileID: 336047692918078781}
+  - {fileID: 6477261540977329270}
+  - {fileID: 5340746033105043321}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1634535553292486609}
+  m_AABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_DirtyAABB: 0
+--- !u!1 &8969247536740029919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2266875412830411073}
+  m_Layer: 0
+  m_Name: DeerDoe_ Pelvis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2266875412830411073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8969247536740029919}
+  m_LocalRotation: {x: 0.5000089, y: -0.49999115, z: -0.5000089, w: -0.49999115}
+  m_LocalPosition: {x: -0.0002596652, y: -0.000000009923705, z: -0.00026913447}
+  m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7131480724908158155}
+  - {fileID: 336047692918078781}
+  m_Father: {fileID: 8106374185483025339}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -87.93294, y: 32.188694, z: 57.817608}
+--- !u!1 &9019171288510507005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7536608117117155116}
+  m_Layer: 0
+  m_Name: DeerDoe_ L Foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7536608117117155116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9019171288510507005}
+  m_LocalRotation: {x: 0.010735446, y: -0.029154863, z: 0.10624903, w: 0.99385405}
+  m_LocalPosition: {x: -0.34177935, y: -0.000000008768315, z: -0.0000000016843165}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5156373653090622529}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -8.486022, y: -6.915112, z: 39.7115}
+--- !u!1 &9144682116406628320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5156373653090622529}
+  m_Layer: 0
+  m_Name: DeerDoe_ L HorseLink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5156373653090622529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144682116406628320}
+  m_LocalRotation: {x: -0.00000016656864, y: 0.000000058684982, z: -0.5442536, w: 0.83892083}
+  m_LocalPosition: {x: -0.26341122, y: 0.000000028729257, z: -0.000000008823925}
+  m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7536608117117155116}
+  m_Father: {fileID: 7235560977516277041}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -0.00000323843, y: 0.0000030106692, z: -175.82533}
+--- !u!1 &9176095694566018403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2586255827589785071}
+  - component: {fileID: 1690394388904731566}
+  m_Layer: 0
+  m_Name: SK_DeerDoe_LOD0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2586255827589785071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9176095694566018403}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4179293708407231167}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &1690394388904731566
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9176095694566018403}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6a74abaaef5f63542b57ff15563ff476, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: -8555470687887841121, guid: 7ff6315c3f91d114aa88f466d293be33, type: 3}
+  m_Bones:
+  - {fileID: 1634535553292486609}
+  - {fileID: 8106374185483025339}
+  - {fileID: 2266875412830411073}
+  - {fileID: 7131480724908158155}
+  - {fileID: 2606980309056116846}
+  - {fileID: 6918520194880145344}
+  - {fileID: 1571272794588772566}
+  - {fileID: 4382267316300123885}
+  - {fileID: 3365083593391424864}
+  - {fileID: 7052310443148493687}
+  - {fileID: 8405581610843826075}
+  - {fileID: 456667693530847952}
+  - {fileID: 8450777838806489567}
+  - {fileID: 3414934916878135538}
+  - {fileID: 3510522832077034201}
+  - {fileID: 12847277365372797}
+  - {fileID: 3395108843966331291}
+  - {fileID: 2542385216257828896}
+  - {fileID: 554468267349052512}
+  - {fileID: 2825424729914446202}
+  - {fileID: 6215046735393274350}
+  - {fileID: 7235560977516277041}
+  - {fileID: 5156373653090622529}
+  - {fileID: 7536608117117155116}
+  - {fileID: 1593702912096564171}
+  - {fileID: 2002808134338296170}
+  - {fileID: 7038625871590435917}
+  - {fileID: 3707029383841926394}
+  - {fileID: 336047692918078781}
+  - {fileID: 6477261540977329270}
+  - {fileID: 5340746033105043321}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1634535553292486609}
+  m_AABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_DirtyAABB: 0

@@ -1,0 +1,290 @@
+Begin Object Class=/Script/Engine.PhysicsAsset Name="SK_Crow_PhysicsAsset"
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_23"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_24"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_25"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_26"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_27"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_28"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_29"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_30"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_31"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_32"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_33"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_34"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_35"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_36"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_37"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_38"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_39"
+   End Object
+   Begin Object Class=/Script/Engine.PhysicsConstraintTemplate Name="PhysicsConstraintTemplate_40"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_24"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_25"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_26"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_27"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_28"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_29"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_30"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_31"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_32"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_33"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_34"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_35"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_36"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_37"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_38"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_39"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_40"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_41"
+   End Object
+   Begin Object Class=/Script/Engine.SkeletalBodySetup Name="SkeletalBodySetup_42"
+   End Object
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfo Name="SceneThumbnailInfo_0"
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_23"
+      DefaultInstance=(JointName="CROW_-Spine",ConstraintBone1="CROW_-Spine",ConstraintBone2="CROW_-Pelvis",Pos2=(X=2.760454,Y=-0.740513,Z=0.000003),PriAxis2=(X=0.963123,Y=0.269061,Z=0.000002),SecAxis2=(X=-0.269060,Y=0.963123,Z=0.000004),ProfileInstance=(ConeLimit=(Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_24"
+      DefaultInstance=(JointName="CROW_-Neck",ConstraintBone1="CROW_-Neck",ConstraintBone2="CROW_-Spine",Pos2=(X=9.392584,Y=0.004484,Z=-0.000001),PriAxis2=(X=1.000000,Y=0.000000,Z=0.000000),ProfileInstance=(ConeLimit=(Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_25"
+      DefaultInstance=(JointName="CROW_-Head",ConstraintBone1="CROW_-Head",ConstraintBone2="CROW_-Neck",Pos2=(X=5.632774,Y=0.000000,Z=-0.000000),PriAxis2=(X=0.846936,Y=0.531695,Z=-0.000001),SecAxis2=(X=-0.531695,Y=0.846936,Z=0.000000),ProfileInstance=(ConeLimit=(Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_26"
+      DefaultInstance=(JointName="CROW_-Queue-de-cheval-1",ConstraintBone1="CROW_-Queue-de-cheval-1",ConstraintBone2="CROW_-Head",Pos2=(X=1.125938,Y=-1.634309,Z=-0.000002),PriAxis2=(X=-0.346466,Y=-0.938063,Z=0.000002),SecAxis2=(X=0.938062,Y=-0.346466,Z=0.000003),ProfileInstance=(ConeLimit=(Swing1LimitDegrees=20.000000,Swing2LimitDegrees=5.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=5.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_27"
+      DefaultInstance=(JointName="CROW_-L-UpperArm",ConstraintBone1="CROW_-L-UpperArm",ConstraintBone2="CROW_-Spine",Pos1=(X=0.000000,Y=-0.000001,Z=0.000000),PriAxis1=(X=1.000000,Y=-0.000000,Z=0.000000),SecAxis1=(X=0.000000,Y=1.000000,Z=-0.000000),Pos2=(X=6.648718,Y=4.517092,Z=2.973274),PriAxis2=(X=0.111205,Y=0.201923,Z=0.973067),SecAxis2=(X=0.939498,Y=-0.340581,Z=-0.036693),ProfileInstance=(ConeLimit=(Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_28"
+      DefaultInstance=(JointName="CROW_-L-Forearm",ConstraintBone1="CROW_-L-Forearm",ConstraintBone2="CROW_-L-UpperArm",Pos2=(X=10.864995,Y=0.000000,Z=0.000000),PriAxis2=(X=0.765496,Y=0.643441,Z=-0.000000),SecAxis2=(X=-0.643441,Y=0.765496,Z=0.000000),ProfileInstance=(ConeLimit=(Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_29"
+      DefaultInstance=(JointName="CROW_-L-Hand",ConstraintBone1="CROW_-L-Hand",ConstraintBone2="CROW_-L-Forearm",Pos2=(X=13.148880,Y=0.000000,Z=0.000000),PriAxis2=(X=0.979727,Y=-0.200099,Z=-0.009741),SecAxis2=(X=0.007597,Y=-0.011479,Z=0.999905),ProfileInstance=(ConeLimit=(Swing1LimitDegrees=35.000000,Swing2LimitDegrees=35.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=15.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_30"
+      DefaultInstance=(JointName="CROW_-R-UpperArm",ConstraintBone1="CROW_-R-UpperArm",ConstraintBone2="CROW_-Spine",Pos2=(X=6.648722,Y=4.517076,Z=-2.973296),PriAxis2=(X=0.111205,Y=0.201919,Z=-0.973068),SecAxis2=(X=0.939498,Y=-0.340582,Z=0.036695),ProfileInstance=(ConeLimit=(Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_31"
+      DefaultInstance=(JointName="CROW_-R-Forearm",ConstraintBone1="CROW_-R-Forearm",ConstraintBone2="CROW_-R-UpperArm",Pos2=(X=10.864992,Y=0.000000,Z=0.000008),PriAxis2=(X=0.499261,Y=0.866452,Z=0.000000),SecAxis2=(X=-0.866452,Y=0.499261,Z=-0.000000),ProfileInstance=(ConeLimit=(Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_32"
+      DefaultInstance=(JointName="CROW_-R-Hand",ConstraintBone1="CROW_-R-Hand",ConstraintBone2="CROW_-R-Forearm",Pos2=(X=13.148880,Y=0.000004,Z=-0.000011),PriAxis2=(X=0.979727,Y=-0.200099,Z=0.009741),SecAxis2=(X=0.007597,Y=-0.011480,Z=-0.999905),ProfileInstance=(ConeLimit=(Swing1LimitDegrees=35.000000,Swing2LimitDegrees=35.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_33"
+      DefaultInstance=(JointName="CROW_-L-Calf",ConstraintBone1="CROW_-L-Calf",ConstraintBone2="CROW_-L-Thigh",Pos2=(X=5.033253,Y=-0.000001,Z=0.000000),PriAxis2=(X=0.424510,Y=0.905283,Z=-0.015919),SecAxis2=(X=-0.905397,Y=0.424565,Z=0.000131),ProfileInstance=(ConeLimit=(Swing1LimitDegrees=35.000000,Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_34"
+      DefaultInstance=(JointName="CROW_-L-HorseLink",ConstraintBone1="CROW_-L-HorseLink",ConstraintBone2="CROW_-L-Calf",Pos2=(X=3.874157,Y=0.000000,Z=-0.000000),PriAxis2=(X=0.347699,Y=-0.937589,Z=0.005659),SecAxis2=(X=0.937471,Y=0.347745,Z=0.014880),ProfileInstance=(ConeLimit=(Swing1LimitDegrees=40.000000,Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_35"
+      DefaultInstance=(JointName="CROW_-L-Foot",ConstraintBone1="CROW_-L-Foot",ConstraintBone2="CROW_-L-HorseLink",Pos2=(X=5.111820,Y=0.000002,Z=-0.000000),PriAxis2=(X=0.845628,Y=0.533222,Z=0.024221),SecAxis2=(X=-0.532183,Y=0.845742,Z=-0.038760),ProfileInstance=(ConeLimit=(Swing1LimitDegrees=30.000000,Swing2LimitDegrees=15.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=15.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_36"
+      DefaultInstance=(JointName="CROW_-R-Calf",ConstraintBone1="CROW_-R-Calf",ConstraintBone2="CROW_-R-Thigh",Pos2=(X=5.033245,Y=0.000002,Z=0.000000),PriAxis2=(X=0.423907,Y=0.905706,Z=0.000000),SecAxis2=(X=-0.905706,Y=0.423907,Z=0.000000),ProfileInstance=(ConeLimit=(Swing1LimitDegrees=35.000000,Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_37"
+      DefaultInstance=(JointName="CROW_-R-HorseLink",ConstraintBone1="CROW_-R-HorseLink",ConstraintBone2="CROW_-R-Calf",Pos2=(X=3.874153,Y=0.000000,Z=0.000000),PriAxis2=(X=0.347064,Y=-0.937842,Z=0.000000),SecAxis2=(X=0.937842,Y=0.347064,Z=-0.000000),ProfileInstance=(ConeLimit=(Swing1LimitDegrees=40.000000,Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_38"
+      DefaultInstance=(JointName="CROW_-R-Foot",ConstraintBone1="CROW_-R-Foot",ConstraintBone2="CROW_-R-HorseLink",Pos2=(X=5.111820,Y=0.000003,Z=0.000000),PriAxis2=(X=0.845628,Y=0.533222,Z=-0.024221),SecAxis2=(X=-0.532182,Y=0.845741,Z=0.038784),ProfileInstance=(ConeLimit=(Swing1LimitDegrees=30.000000,Swing2LimitDegrees=15.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=15.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_39"
+      DefaultInstance=(JointName="CROW_-L-Thigh",ConstraintBone1="CROW_-L-Thigh",ConstraintBone2="CROW_-Pelvis",Pos2=(X=-0.000003,Y=-0.000004,Z=3.102244),PriAxis2=(X=0.034058,Y=-0.998645,Z=0.039358),SecAxis2=(X=-0.999117,Y=-0.034991,Z=-0.023254),ProfileInstance=(ConeLimit=(Swing1LimitDegrees=35.000000,Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="PhysicsConstraintTemplate_40"
+      DefaultInstance=(JointName="CROW_-R-Thigh",ConstraintBone1="CROW_-R-Thigh",ConstraintBone2="CROW_-Pelvis",Pos2=(X=0.000004,Y=0.000008,Z=-3.102244),PriAxis2=(X=0.034058,Y=-0.998644,Z=-0.039361),SecAxis2=(X=-0.999117,Y=-0.034991,Z=0.023251),ProfileInstance=(ConeLimit=(Swing1LimitDegrees=35.000000,Swing2LimitDegrees=10.000000,Swing1Motion=ACM_Limited,Swing2Motion=ACM_Limited),TwistLimit=(TwistLimitDegrees=10.000000,TwistMotion=ACM_Limited)))
+   End Object
+   Begin Object Name="SkeletalBodySetup_24"
+      AggGeom=(BoxElems=((Center=(X=-2.297558,Y=0.430352,Z=0.003151),Rotation=(Pitch=0.023713,Yaw=177.849668,Roll=-89.934853),X=7.329977,Y=8.123171,Z=7.816863)))
+      BoneName="CROW_-Pelvis"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_25"
+      AggGeom=(BoxElems=((Center=(X=4.491789,Y=-0.717555,Z=0.018925),Rotation=(Pitch=0.234834,Yaw=-5.862844,Roll=-89.720139),X=12.171118,Y=8.869802,Z=8.596905)))
+      DefaultInstance=(LinearDamping=1.000000,AngularDamping=5.000000)
+      BoneName="CROW_-Spine"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_26"
+      AggGeom=(BoxElems=((Center=(X=3.800382,Y=-0.565764,Z=-0.000030),Rotation=(Pitch=-0.000003,Yaw=89.999993,Roll=-89.999997),X=5.221531,Y=4.416227,Z=4.977532)))
+      BoneName="CROW_-Neck"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_27"
+      AggGeom=(BoxElems=((Center=(X=2.696246,Y=-2.614707,Z=-0.000045),Rotation=(Pitch=-0.000033,Yaw=4.564292,Roll=-90.000032),X=2.724250,Y=4.452837,Z=7.014185)))
+      BoneName="CROW_-Head"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_28"
+      AggGeom=(BoxElems=((Center=(X=3.459692,Y=-0.250542,Z=-0.000039),Rotation=(Pitch=-0.000000,Yaw=-87.615027,Roll=-89.999915),X=1.561308,Y=1.951120,Z=5.784060)))
+      DefaultInstance=(LinearDamping=1.000000,AngularDamping=5.000000)
+      BoneName="CROW_-Queue-de-cheval-1"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_29"
+      AggGeom=(BoxElems=((Center=(X=3.700415,Y=-1.014981,Z=-0.879740),Rotation=(Pitch=-0.000001,Yaw=-114.055850,Roll=-89.144392),X=10.500000,Y=4.000002,Z=12.927618)))
+      BoneName="CROW_-L-UpperArm"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_30"
+      AggGeom=(BoxElems=((Center=(X=6.380145,Y=-1.570369,Z=-0.602985),Rotation=(Pitch=-0.000005,Yaw=92.687073,Roll=-90.244205),X=11.500000,Y=3.498870,Z=13.856820)))
+      BoneName="CROW_-L-Forearm"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_31"
+      AggGeom=(BoxElems=((Center=(X=12.134786,Y=-0.579867,Z=2.385771),Rotation=(Pitch=0.000006,Yaw=-90.014183,Roll=-94.581900),X=3.000000,Y=8.517306,Z=23.675323)))
+      BoneName="CROW_-L-Hand"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_32"
+      AggGeom=(BoxElems=((Center=(X=3.725263,Y=-1.026138,Z=0.942893),Rotation=(Pitch=-0.000001,Yaw=-114.055850,Roll=-89.144392),X=10.500000,Y=4.000002,Z=12.927618)))
+      BoneName="CROW_-R-UpperArm"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_33"
+      AggGeom=(BoxElems=((Center=(X=6.223376,Y=-1.577778,Z=0.490035),Rotation=(Pitch=-0.000003,Yaw=92.687134,Roll=-90.946082),X=11.500000,Y=3.498870,Z=13.856820)))
+      BoneName="CROW_-R-Forearm"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_34"
+      AggGeom=(BoxElems=((Center=(X=11.474177,Y=-0.512343,Z=-3.306626),Rotation=(Pitch=0.000006,Yaw=-90.014170,Roll=-74.581872),X=3.000000,Y=8.517306,Z=23.675323)))
+      BoneName="CROW_-R-Hand"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_35"
+      AggGeom=(BoxElems=((Center=(X=1.171395,Y=0.269849,Z=0.179774),Rotation=(Pitch=0.000000,Yaw=90.000000,Roll=-90.000000),X=2.137624,Y=2.683761,Z=5.755771)))
+      BoneName="CROW_-L-Calf"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_36"
+      AggGeom=(BoxElems=((Center=(X=2.215811,Y=-0.330442,Z=-0.019741),Rotation=(Pitch=0.000000,Yaw=90.000000,Roll=-90.000000),X=1.391946,Y=0.970686,Z=3.780823)))
+      BoneName="CROW_-L-HorseLink"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_37"
+      AggGeom=(BoxElems=((Center=(X=0.170219,Y=0.030404,Z=-0.010762),Rotation=(Pitch=4.117294,Yaw=-2.538721,Roll=-97.287703),X=0.500000,Y=5.167853,Z=7.627663)))
+      BoneName="CROW_-L-Foot"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_38"
+      AggGeom=(BoxElems=((Center=(X=1.171403,Y=0.269858,Z=-0.179773),Rotation=(Pitch=0.000000,Yaw=90.000000,Roll=-90.000000),X=2.137627,Y=2.683773,Z=5.755774)))
+      BoneName="CROW_-R-Calf"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_39"
+      AggGeom=(BoxElems=((Center=(X=2.309860,Y=-0.185214,Z=0.020241),Rotation=(Pitch=0.000000,Yaw=90.000000,Roll=-90.000000),X=1.098617,Y=0.961315,Z=3.590831)))
+      BoneName="CROW_-R-HorseLink"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_40"
+      AggGeom=(BoxElems=((Center=(X=-0.176239,Y=-0.200831,Z=-0.169119),Rotation=(Pitch=0.000003,Yaw=-177.617410,Roll=-95.054785),X=0.782831,Y=5.313159,Z=7.910923)))
+      BoneName="CROW_-R-Foot"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_41"
+      AggGeom=(BoxElems=((Center=(X=1.863184,Y=-1.088687,Z=0.351515),Rotation=(Pitch=-0.000003,Yaw=89.999993,Roll=-89.999997),X=3.817815,Y=4.000000,Z=4.633521)))
+      BoneName="CROW_-L-Thigh"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SkeletalBodySetup_42"
+      AggGeom=(BoxElems=((Center=(X=1.857408,Y=-1.085211,Z=-0.548240),Rotation=(Pitch=0.000000,Yaw=90.000000,Roll=-90.000000),X=3.817820,Y=4.000000,Z=4.633522)))
+      BoneName="CROW_-R-Thigh"
+      CollisionTraceFlag=CTF_UseSimpleAsComplex
+   End Object
+   Begin Object Name="SceneThumbnailInfo_0"
+   End Object
+   PreviewSkeletalMesh="/Game/AnimalVarietyPack/Crow/Meshes/SK_Crow.SK_Crow"
+   BoundsBodies(0)=0
+   BoundsBodies(1)=1
+   BoundsBodies(2)=2
+   BoundsBodies(3)=3
+   BoundsBodies(4)=4
+   BoundsBodies(5)=5
+   BoundsBodies(6)=6
+   BoundsBodies(7)=7
+   BoundsBodies(8)=8
+   BoundsBodies(9)=9
+   BoundsBodies(10)=10
+   BoundsBodies(11)=11
+   BoundsBodies(12)=12
+   BoundsBodies(13)=13
+   BoundsBodies(14)=14
+   BoundsBodies(15)=15
+   BoundsBodies(16)=16
+   BoundsBodies(17)=17
+   BoundsBodies(18)=18
+   SkeletalBodySetups(0)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_24"'
+   SkeletalBodySetups(1)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_25"'
+   SkeletalBodySetups(2)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_26"'
+   SkeletalBodySetups(3)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_27"'
+   SkeletalBodySetups(4)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_28"'
+   SkeletalBodySetups(5)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_29"'
+   SkeletalBodySetups(6)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_30"'
+   SkeletalBodySetups(7)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_31"'
+   SkeletalBodySetups(8)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_32"'
+   SkeletalBodySetups(9)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_33"'
+   SkeletalBodySetups(10)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_34"'
+   SkeletalBodySetups(11)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_35"'
+   SkeletalBodySetups(12)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_36"'
+   SkeletalBodySetups(13)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_37"'
+   SkeletalBodySetups(14)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_38"'
+   SkeletalBodySetups(15)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_39"'
+   SkeletalBodySetups(16)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_40"'
+   SkeletalBodySetups(17)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_41"'
+   SkeletalBodySetups(18)=/Script/Engine.SkeletalBodySetup'"SkeletalBodySetup_42"'
+   ConstraintSetup(0)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_23"'
+   ConstraintSetup(1)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_24"'
+   ConstraintSetup(2)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_25"'
+   ConstraintSetup(3)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_26"'
+   ConstraintSetup(4)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_27"'
+   ConstraintSetup(5)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_28"'
+   ConstraintSetup(6)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_29"'
+   ConstraintSetup(7)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_30"'
+   ConstraintSetup(8)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_31"'
+   ConstraintSetup(9)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_32"'
+   ConstraintSetup(10)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_33"'
+   ConstraintSetup(11)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_34"'
+   ConstraintSetup(12)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_35"'
+   ConstraintSetup(13)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_36"'
+   ConstraintSetup(14)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_37"'
+   ConstraintSetup(15)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_38"'
+   ConstraintSetup(16)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_39"'
+   ConstraintSetup(17)=/Script/Engine.PhysicsConstraintTemplate'"PhysicsConstraintTemplate_40"'
+   SolverSettings=(CullDistance=1.000000,bUseLinearJointSolver=False)
+   ThumbnailInfo=/Script/UnrealEd.SceneThumbnailInfo'"SceneThumbnailInfo_0"'
+End Object
