@@ -188,7 +188,7 @@ public class NPC : MonoBehaviour, IDamagable
         {
             NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
             i++;
-            if (1 == 30)
+            if (i == 30)
                 break;
         }
 
@@ -205,7 +205,7 @@ public class NPC : MonoBehaviour, IDamagable
         {
             NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
             i++;
-            if (1 == 30)
+            if (i == 30)
                 break;
         }
 
