@@ -243,8 +243,5 @@ public class NPC : MonoBehaviour, IDamagable
         yield return new WaitForSeconds(0.1f);
         for (int x = 0; x < meshRenderers.Length; x++)
             meshRenderers[x].material.color = Color.white;
-
     }
-
-
 }
