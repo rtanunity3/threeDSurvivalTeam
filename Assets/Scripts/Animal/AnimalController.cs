@@ -4,7 +4,6 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-
 public enum AIState
 {
     Idle,
@@ -13,7 +12,7 @@ public enum AIState
     Fleeing,
 }
 
-public class NPC : MonoBehaviour, IDamagable
+public class AnimalController : MonoBehaviour, IDamagable
 {
     [Header("Stats")]
     public int health;
