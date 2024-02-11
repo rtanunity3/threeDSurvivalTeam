@@ -24,9 +24,15 @@ public class ObstacleDetection : MonoBehaviour
         startDetect = true;
     }
 
+    private void Update()
+    {
+    }
+
+    //기즈모 그리기
     void OnDrawGizmos()
     {
         RaycastHit hit;
+        //오브젝트보다 y축으로 살짝 올라간 Vector 값
         Vector3 newTransformPosition = new Vector3(transform.position.x, transform.position.y + rayPosY, transform.position.z);
 
         bool isHit = Physics.BoxCast(newTransformPosition, transform.localScale / 2, transform.forward, out hit, transform.rotation, maxDistance);
@@ -34,6 +40,7 @@ public class ObstacleDetection : MonoBehaviour
         //장애물 검출 시
         if (isHit && startDetect)
         {
+            //충돌체의 태그명
             if (hit.collider.CompareTag("Animal") || hit.collider.CompareTag("Obstacle") || hit.collider.CompareTag("Ground"))
             {
                 animalController.OnReSetDestination();

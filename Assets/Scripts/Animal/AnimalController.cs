@@ -13,6 +13,12 @@ public enum AIState
     Fleeing,
 }
 
+public enum AnimalType
+{
+    Herbivore,
+    Carnivore
+}
+
 public class AnimalController : MonoBehaviour, IDamagable
 {
     [Header("Stats")]
@@ -23,6 +29,7 @@ public class AnimalController : MonoBehaviour, IDamagable
 
     [Header("AI")]
     public AIState aiState;
+    public AnimalType animalType;
     public float detectDistance;
     public float safeDistance;
 
@@ -98,21 +105,31 @@ public class AnimalController : MonoBehaviour, IDamagable
             agent.isStopped = false;
             NavMeshPath path = new NavMeshPath();
 
-            //플레이어 위치까지의 경로가 확인되는지
-            if (agent.CalculatePath(PlayerController.instance.transform.position, path))
+            switch (animalType)
             {
-                //플레이어 위치로 이동
-                agent.SetDestination(PlayerController.instance.transform.position);
-            }
-            else
-            {
-                SetState(AIState.Fleeing);
+                //초식동물
+                case AnimalType.Herbivore:
+
+                    //플레이어오의 거리
+                    if (playerDistance < 30f && enableSetDestination) { StartCoroutine(SetFleeDestination());}
+                    break;
+
+                //육식 동물
+                case AnimalType.Carnivore:
+
+                    //플레이어 위치까지의 경로가 확인되는지
+                    if (agent.CalculatePath(PlayerController.instance.transform.position, path))
+                    {
+                        //플레이어 위치로 이동
+                        agent.SetDestination(PlayerController.instance.transform.position);
+                    }
+                    break;
             }
         }
         else
         {
             agent.isStopped = true;
-            if (Time.time - lastAttackTime > attackRate)
+            if (Time.time - lastAttackTime > attackRate && animalType == AnimalType.Carnivore)
             {
                 lastAttackTime = Time.time;
                 PlayerController.instance.GetComponent<IDamagable>().TakePhysicalDamage(damage);
@@ -276,18 +293,18 @@ public class AnimalController : MonoBehaviour, IDamagable
     Vector3 SetBackLocation()
     {
         NavMeshHit hit;
-        NavMesh.SamplePosition(new Vector3(transform.position.x, transform.position.y, -transform.position.z) 
-            + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
-
-        int i = 0;
-        while (Vector3.Distance(transform.position, hit.position) < detectDistance)
-        {
-            NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
-            i++;
-            if (i == 30)
-                break;
-        }
-
+        NavMesh.SamplePosition(new Vector3(transform.position.x, transform.position.y, -transform.position.z)
+           , out hit, minWanderDistance, NavMesh.AllAreas);
         return hit.position;
+    }
+
+    //
+    IEnumerator SetFleeDestination()
+    {
+        enableSetDestination = false;
+        SetState(AIState.Fleeing);
+        agent.SetDestination(GetFleeLocation());
+        yield return new WaitForSeconds(3f);
+        enableSetDestination = true;
     }
 }
