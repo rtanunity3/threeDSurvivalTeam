@@ -150,7 +150,6 @@ public class AnimalController : MonoBehaviour, IDamagable
                 //초식 동물
                 case AnimalType.Herbivore:
                     SetState(AIState.Fleeing);
-                    Debug.Log("도망 애니메이션 실행");
                     animator.SetBool("Fleeing", true);
                     break;
             }
