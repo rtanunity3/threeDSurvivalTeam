@@ -72,7 +72,7 @@ public class AnimalController : MonoBehaviour, IDamagable
         //플레이어와의 거리
         playerDistance = Vector3.Distance(transform.position, PlayerController.instance.transform.position);
 
-        animator.SetBool("Moving", aiState != AIState.Idle);
+        animator.SetBool("Moving", aiState != AIState.Idle && aiState != AIState.Fleeing);
 
         switch (aiState)
         {
@@ -91,9 +91,13 @@ public class AnimalController : MonoBehaviour, IDamagable
         {
             agent.SetDestination(GetFleeLocation());
         }
-        else
+
+        if(playerDistance > safeDistance)
         {
+            //Debug.Log($"{playerDistance}, {detectDistance}");
+            //Debug.Log("추적에서 벗어남");
             SetState(AIState.Wandering);
+            animator.SetBool("Fleeing", false);
         }
     }
 
@@ -105,25 +109,11 @@ public class AnimalController : MonoBehaviour, IDamagable
             agent.isStopped = false;
             NavMeshPath path = new NavMeshPath();
 
-            switch (animalType)
+            //플레이어 위치까지의 경로가 확인되는지
+            if (agent.CalculatePath(PlayerController.instance.transform.position, path))
             {
-                //초식동물
-                case AnimalType.Herbivore:
-
-                    //플레이어오의 거리
-                    if (playerDistance < 30f && enableSetDestination) { StartCoroutine(SetFleeDestination());}
-                    break;
-
-                //육식 동물
-                case AnimalType.Carnivore:
-
-                    //플레이어 위치까지의 경로가 확인되는지
-                    if (agent.CalculatePath(PlayerController.instance.transform.position, path))
-                    {
-                        //플레이어 위치로 이동
-                        agent.SetDestination(PlayerController.instance.transform.position);
-                    }
-                    break;
+                //플레이어 위치로 이동
+                agent.SetDestination(PlayerController.instance.transform.position);
             }
         }
         else
@@ -147,9 +137,23 @@ public class AnimalController : MonoBehaviour, IDamagable
             Invoke("WanderToNewLocation", Random.Range(minWanderWaitTime, maxWanderWaitTime));
         }
 
+        //플레이어 거리가 감지 범위 내로 들어왔을 경우
         if (playerDistance < detectDistance)
         {
-            SetState(AIState.Attacking);
+            switch (animalType)
+            {
+                //육식 동물
+                case AnimalType.Carnivore:
+                    SetState(AIState.Attacking);
+                    break;
+
+                //초식 동물
+                case AnimalType.Herbivore:
+                    SetState(AIState.Fleeing);
+                    Debug.Log("도망 애니메이션 실행");
+                    animator.SetBool("Fleeing", true);
+                    break;
+            }
         }
     }
 
@@ -296,15 +300,5 @@ public class AnimalController : MonoBehaviour, IDamagable
         NavMesh.SamplePosition(new Vector3(transform.position.x, transform.position.y, -transform.position.z)
            , out hit, minWanderDistance, NavMesh.AllAreas);
         return hit.position;
-    }
-
-    //
-    IEnumerator SetFleeDestination()
-    {
-        enableSetDestination = false;
-        SetState(AIState.Fleeing);
-        agent.SetDestination(GetFleeLocation());
-        yield return new WaitForSeconds(3f);
-        enableSetDestination = true;
     }
 }
