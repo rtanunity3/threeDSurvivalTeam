@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+
 public enum AIState
 {
     Idle,
@@ -21,7 +22,7 @@ public class AnimalController : MonoBehaviour, IDamagable
     public ItemData[] dropOnDeath;
 
     [Header("AI")]
-    private AIState aiState;
+    public AIState aiState;
     public float detectDistance;
     public float safeDistance;
 
@@ -45,6 +46,8 @@ public class AnimalController : MonoBehaviour, IDamagable
     private Animator animator;
     private SkinnedMeshRenderer[] meshRenderers;
 
+    private bool enableSetDestination = true;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -59,6 +62,7 @@ public class AnimalController : MonoBehaviour, IDamagable
 
     private void Update()
     {
+        //플레이어와의 거리
         playerDistance = Vector3.Distance(transform.position, PlayerController.instance.transform.position);
 
         animator.SetBool("Moving", aiState != AIState.Idle);
@@ -70,11 +74,13 @@ public class AnimalController : MonoBehaviour, IDamagable
             case AIState.Attacking: AttackingUpdate(); break;
             case AIState.Fleeing: FleeingUpdate(); break;
         }
+
     }
 
     private void FleeingUpdate()
     {
-        if(agent.remainingDistance < 0.1f)
+        //지정한 목적지에 도착 했다면
+        if (agent.remainingDistance < 0.1f)
         {
             agent.SetDestination(GetFleeLocation());
         }
@@ -84,14 +90,18 @@ public class AnimalController : MonoBehaviour, IDamagable
         }
     }
 
+    //추적
     private void AttackingUpdate()
     {
         if (playerDistance > attackDistance || !isplayerInFieldofView())
         {
             agent.isStopped = false;
             NavMeshPath path = new NavMeshPath();
-            if(agent.CalculatePath(PlayerController.instance.transform.position, path))
+
+            //플레이어 위치까지의 경로가 확인되는지
+            if (agent.CalculatePath(PlayerController.instance.transform.position, path))
             {
+                //플레이어 위치로 이동
                 agent.SetDestination(PlayerController.instance.transform.position);
             }
             else
@@ -102,7 +112,7 @@ public class AnimalController : MonoBehaviour, IDamagable
         else
         {
             agent.isStopped = true;
-            if(Time.time -lastAttackTime > attackRate)
+            if (Time.time - lastAttackTime > attackRate)
             {
                 lastAttackTime = Time.time;
                 PlayerController.instance.GetComponent<IDamagable>().TakePhysicalDamage(damage);
@@ -114,13 +124,13 @@ public class AnimalController : MonoBehaviour, IDamagable
 
     private void PassiveUpdate()
     {
-        if(aiState == AIState.Wandering && agent.remainingDistance < 0.1f)
+        if (aiState == AIState.Wandering && agent.remainingDistance < 0.1f)
         {
             SetState(AIState.Idle);
             Invoke("WanderToNewLocation", Random.Range(minWanderWaitTime, maxWanderWaitTime));
         }
 
-        if(playerDistance < detectDistance)
+        if (playerDistance < detectDistance)
         {
             SetState(AIState.Attacking);
         }
@@ -167,9 +177,9 @@ public class AnimalController : MonoBehaviour, IDamagable
         animator.speed = agent.speed / walkSpeed;
     }
 
-    void WanderToNewLocation()
+    public void WanderToNewLocation()
     {
-        if(aiState != AIState.Idle)
+        if (aiState != AIState.Idle)
         {
             return;
         }
@@ -183,7 +193,7 @@ public class AnimalController : MonoBehaviour, IDamagable
         NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
 
         int i = 0;
-        while(Vector3.Distance(transform.position, hit.position) < detectDistance)
+        while (Vector3.Distance(transform.position, hit.position) < detectDistance)
         {
             NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
             i++;
@@ -194,6 +204,7 @@ public class AnimalController : MonoBehaviour, IDamagable
         return hit.position;
     }
 
+    //도망갈 장소
     Vector3 GetFleeLocation()
     {
         NavMeshHit hit;
@@ -227,7 +238,8 @@ public class AnimalController : MonoBehaviour, IDamagable
 
     void Die()
     {
-        for (int x = 0; x < dropOnDeath.Length; x++){
+        for (int x = 0; x < dropOnDeath.Length; x++)
+        {
             Instantiate(dropOnDeath[x].dropPrefab, transform.position + Vector3.up * 2, Quaternion.identity);
         }
 
@@ -242,5 +254,40 @@ public class AnimalController : MonoBehaviour, IDamagable
         yield return new WaitForSeconds(0.1f);
         for (int x = 0; x < meshRenderers.Length; x++)
             meshRenderers[x].material.color = Color.white;
+    }
+
+    //목적지 재설정
+    public void OnReSetDestination()
+    {
+        if (enableSetDestination)
+        {
+            StartCoroutine(ReSetDesination());
+        }
+    }
+
+    IEnumerator ReSetDesination()
+    {
+        enableSetDestination = false;
+        agent.SetDestination(SetBackLocation());
+        yield return new WaitForSeconds(3f);
+        enableSetDestination = true;
+    }
+
+    Vector3 SetBackLocation()
+    {
+        NavMeshHit hit;
+        NavMesh.SamplePosition(new Vector3(transform.position.x, transform.position.y, -transform.position.z) 
+            + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
+
+        int i = 0;
+        while (Vector3.Distance(transform.position, hit.position) < detectDistance)
+        {
+            NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
+            i++;
+            if (i == 30)
+                break;
+        }
+
+        return hit.position;
     }
 }
