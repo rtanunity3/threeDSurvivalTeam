@@ -92,7 +92,7 @@ public class AnimalController : MonoBehaviour, IDamagable
             agent.SetDestination(GetFleeLocation());
         }
 
-        if(playerDistance > safeDistance)
+        if (playerDistance > safeDistance)
         {
             //Debug.Log($"{playerDistance}, {detectDistance}");
             //Debug.Log("추적에서 벗어남");
@@ -296,8 +296,16 @@ public class AnimalController : MonoBehaviour, IDamagable
     Vector3 SetBackLocation()
     {
         NavMeshHit hit;
-        NavMesh.SamplePosition(new Vector3(transform.position.x, transform.position.y, -transform.position.z)
-           , out hit, minWanderDistance, NavMesh.AllAreas);
+
+        for (int i = 0; i < 30; i++)
+        {
+            if (NavMesh.SamplePosition(transform.position, out hit, minWanderDistance, NavMesh.AllAreas))
+            {
+                return hit.position;
+            }
+        }
+
+        NavMesh.SamplePosition(transform.position, out hit, minWanderDistance, NavMesh.AllAreas);
         return hit.position;
     }
 }
