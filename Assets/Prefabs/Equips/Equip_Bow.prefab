@@ -49,6 +49,7 @@ MonoBehaviour:
   attackRate: 0.8
   attackDistance: 1
   useStamina: 15
+  isBow: 0
   doseGatherResources: 0
   doseDealDamage: 0
   damage: 0
