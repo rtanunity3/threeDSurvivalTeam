@@ -4,6 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using static UnityEditor.Progress;
+using static UnityEditor.Timeline.Actions.MenuPriority;
 
 public class ItemSlot
 {
@@ -96,12 +98,17 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(ItemData item)
     {
+        AddItem(item, 1);
+    }
+
+    public void AddItem(ItemData item, int count)
+    {
         if (item.canStack)
         {
             ItemSlot slotToStackTo = GetItemStack(item);
             if (slotToStackTo != null)
             {
-                slotToStackTo.quantity++;
+                slotToStackTo.quantity += count;
                 UpdateUI();
                 return;
             }
@@ -112,7 +119,7 @@ public class Inventory : MonoBehaviour
         if (emptySlot != null)
         {
             emptySlot.item = item;
-            emptySlot.quantity = 1;
+            emptySlot.quantity = count;
             UpdateUI();
             return;
         }
@@ -136,7 +143,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    ItemSlot GetItemStack(ItemData item)
+    public ItemSlot GetItemStack(ItemData item)
     {
         for (int i = 0; i < slots.Length; i++)
         {
@@ -279,5 +286,37 @@ public class Inventory : MonoBehaviour
     public bool HasItems(ItemData item, int quantity)
     {
         return false;
+    }
+
+
+    public bool CheckCraftRequireItem(RequireItem[] reqItem)
+    {
+        foreach (RequireItem requireItem in reqItem)
+        {
+            ItemSlot slotToStackTo = GetItemStack(requireItem.reqItem);
+            if (slotToStackTo == null)
+                return false;
+
+            if (slotToStackTo.quantity < requireItem.reqItemCnt)
+                return false;
+        }
+
+        return true;
+    }
+
+    public void CraftItem(CraftData craftItem)
+    {
+        foreach (RequireItem requireItem in craftItem.reqItem)
+        {
+            ItemSlot slot = GetItemStack(requireItem.reqItem);
+            slot.quantity -= requireItem.reqItemCnt;
+            if (slot.quantity <= 0)
+            {
+                // TODO : 재료 0 처리
+                slot.item = null;
+            }
+        }
+        AddItem(craftItem.targetItem, craftItem.resultCnt);
+        UpdateUI();
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -23,9 +24,15 @@ public class CraftManager : MonoBehaviour
 
     [Header("Selected Item")]
     public GameObject reqItemList;
+
+    [Header("Button Group")]
+    public GameObject buttonGroup;
     public Image icon;
     public TextMeshProUGUI quantityText;
-    public GameObject useButton;
+    public Button useButton;
+    [Header("Button Group")]
+    public GameObject dialog;
+    public TextMeshProUGUI dialogText;
 
     private PlayerController controller;
     private CraftData selectedItem;
@@ -45,22 +52,41 @@ public class CraftManager : MonoBehaviour
     private void Start()
     {
         recipeWindow.SetActive(false);
+        buttonGroup.SetActive(false);
+        useButton.onClick.AddListener(CraftItem);
         uiSlots = new CraftSlotUI[craftDataList.Length];
 
         Init();
     }
 
+
     private void Init()
     {
-        //GameObject itemPrefab = Resources.Load<GameObject>("Prefabs/");
-
-
         for (int i = 0; i < craftDataList.Length; i++)
         {
             CraftSlotUI craftSlot = Instantiate(craftItemPrefab, craftRecipeListContent.transform).GetComponent<CraftSlotUI>();
             craftSlot.Set(craftDataList[i]);
             uiSlots[i] = craftSlot;
         }
+    }
+
+    private void unSelect()
+    {
+        selectedItem = null;
+
+        foreach (CraftSlotUI craftSlot in uiSlots)
+        {
+            craftSlot.UnRelease();
+        }
+
+        CraftSlotUI[] tmp = reqItemList.GetComponentsInChildren<CraftSlotUI>();
+        foreach (CraftSlotUI slot in tmp)
+        {
+            Destroy(slot.gameObject);
+        }
+
+        buttonGroup.SetActive(false);
+
     }
 
     public void OnCraftButton(InputAction.CallbackContext callbackContext)
@@ -81,6 +107,7 @@ public class CraftManager : MonoBehaviour
         }
         else
         {
+            unSelect();
             recipeWindow.SetActive(true);
             controller.ToggleCursor(true);
         }
@@ -115,9 +142,27 @@ public class CraftManager : MonoBehaviour
             CraftSlotUI RequireSlot = Instantiate(craftItemPrefab, reqItemList.transform).GetComponent<CraftSlotUI>();
             RequireSlot.Set(requireItem);
         }
+
+        buttonGroup.SetActive(true);
+        icon.sprite = recipe.targetItem.icon;
+        quantityText.text = recipe.resultCnt.ToString();
     }
 
-
+    private void CraftItem()
+    {
+        if (Inventory.instance.CheckCraftRequireItem(selectedItem.reqItem))
+        {
+            Inventory.instance.CraftItem(selectedItem);
+            dialogText.text = $"{selectedItem.targetItem.displayName}를 제작했습니다.";
+            dialog.SetActive(true);
+        }
+        else
+        {
+            //Debug.LogWarning("재료 부족");
+            dialogText.text = "재료가 부족합니다.";
+            dialog.SetActive(true);
+        }
+    }
 }
 
 //public class CraftRecipe

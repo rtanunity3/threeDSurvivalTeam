@@ -40,8 +40,11 @@ public class CraftSlotUI : MonoBehaviour
         gameObject.SetActive(true);
         icon.sprite = curItem.icon;
         itemNameText.text = reqItem.reqItem.displayName;
-        quantityText.text = ""; // TODO : itemID 생기면 해당 값으로 검색해서 현재 소지량 넣기
-        reqCntText.text = reqItem.reqItemCnt.ToString();
+
+        // TODO : itemID 생기면 해당 값으로 검색해서 현재 소지량 넣기
+        ItemSlot invenItem = Inventory.instance.GetItemStack(reqItem.reqItem);
+        quantityText.text = invenItem != null ? invenItem.quantity.ToString() : "0";
+        reqCntText.text = $"x {reqItem.reqItemCnt}";
         reqCntText.gameObject.SetActive(true);
     }
 

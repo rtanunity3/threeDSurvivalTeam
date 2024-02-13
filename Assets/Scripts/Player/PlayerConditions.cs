@@ -75,7 +75,7 @@ public class PlayerConditions : MonoBehaviour, IDamagable
         health.uiBar.fillAmount = health.GetPercentage();
         hunger.uiBar.fillAmount = hunger.GetPercentage();
         stamina.uiBar.fillAmount = stamina.GetPercentage();
-        temperature.uiBar.fillAmount = temperature.GetPercentage();
+        //temperature.uiBar.fillAmount = temperature.GetPercentage();
 
         UpdatePlayerConditions();
     }
