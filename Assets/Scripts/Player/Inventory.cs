@@ -67,7 +67,7 @@ public class Inventory : MonoBehaviour
 
     public void OnInventoryButton(InputAction.CallbackContext callbackContext)
     {
-        if(callbackContext.phase == InputActionPhase.Started)
+        if (callbackContext.phase == InputActionPhase.Started)
         {
             Toggle();
         }
@@ -87,34 +87,33 @@ public class Inventory : MonoBehaviour
             onOpenInventory?.Invoke();
             controller.ToggleCursor(true);
         }
-        
     }
 
     public bool IsOpen()
     {
         return inventoryWindow.activeInHierarchy;
     }
-    
+
     public void AddItem(ItemData item)
     {
         if (item.canStack)
         {
             ItemSlot slotToStackTo = GetItemStack(item);
-            if(slotToStackTo != null)
+            if (slotToStackTo != null)
             {
                 slotToStackTo.quantity++;
-                UPdateUI();
+                UpdateUI();
                 return;
             }
         }
 
         ItemSlot emptySlot = GetEmptySlot();
 
-        if(emptySlot != null)
+        if (emptySlot != null)
         {
             emptySlot.item = item;
             emptySlot.quantity = 1;
-            UPdateUI();
+            UpdateUI();
             return;
         }
 
@@ -126,9 +125,9 @@ public class Inventory : MonoBehaviour
         Instantiate(item.dropPrefab, dropPosition.position, Quaternion.Euler(Vector3.one * Random.value * 360f));
     }
 
-    void UPdateUI()
+    void UpdateUI()
     {
-        for(int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].item != null)
                 uiSlots[i].Set(slots[i]);
@@ -137,9 +136,9 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    ItemSlot GetItemStack (ItemData item)
+    ItemSlot GetItemStack(ItemData item)
     {
-        for(int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].item == item && slots[i].quantity < item.maxStackAmount)
                 return slots[i];
@@ -159,7 +158,7 @@ public class Inventory : MonoBehaviour
         return null;
     }
 
-    public  void SelectItem(int index)
+    public void SelectItem(int index)
     {
         if (slots[index].item == null)
             return;
@@ -202,7 +201,7 @@ public class Inventory : MonoBehaviour
 
     public void OnUseButton()
     {
-        if(selectedItem.item.type == ItemType.Consumable)
+        if (selectedItem.item.type == ItemType.Consumable)
         {
             for (int i = 0; i < selectedItem.item.consumables.Length; i++)
             {
@@ -228,7 +227,7 @@ public class Inventory : MonoBehaviour
         uiSlots[selectedItemIndex].equipped = true;
         curEquipIndex = selectedItemIndex;
         EquipManager.instance.EquipNew(selectedItem.item);
-        UPdateUI();
+        UpdateUI();
 
         SelectItem(selectedItemIndex);
     }
@@ -237,7 +236,7 @@ public class Inventory : MonoBehaviour
     {
         uiSlots[index].equipped = false;
         EquipManager.instance.UnEquip();
-        UPdateUI();
+        UpdateUI();
 
         if (selectedItemIndex == index)
             SelectItem(index);
@@ -258,7 +257,7 @@ public class Inventory : MonoBehaviour
     {
         selectedItem.quantity--;
 
-        if(selectedItem.quantity <= 0)
+        if (selectedItem.quantity <= 0)
         {
             if (uiSlots[selectedItemIndex].equipped)
             {
@@ -269,7 +268,7 @@ public class Inventory : MonoBehaviour
             ClearSelectItemWindow();
         }
 
-        UPdateUI();
+        UpdateUI();
     }
 
     public void RemoveItem(ItemData item)
