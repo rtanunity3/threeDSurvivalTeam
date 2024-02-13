@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ac462d3b05f4d15a0ff3375321635f, type: 3}
   m_Name: Arrow
   m_EditorClassIdentifier: 
+  id: 332
   displayName: "\uD654\uC0B4"
   description: "\uC815\uAD50\uD558\uAC8C \uC81C\uC791\uB41C \uD654\uC0B4\uC785\uB2C8\uB2E4."
   type: 0
