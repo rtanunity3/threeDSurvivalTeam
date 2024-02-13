@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using static UnityEditor.Progress;
+using static UnityEditor.Timeline.Actions.MenuPriority;
 
+[System.Serializable]
 public class ItemSlot
 {
     public ItemData item;
@@ -67,7 +71,7 @@ public class Inventory : MonoBehaviour
 
     public void OnInventoryButton(InputAction.CallbackContext callbackContext)
     {
-        if(callbackContext.phase == InputActionPhase.Started)
+        if (callbackContext.phase == InputActionPhase.Started)
         {
             Toggle();
         }
@@ -87,22 +91,26 @@ public class Inventory : MonoBehaviour
             onOpenInventory?.Invoke();
             controller.ToggleCursor(true);
         }
-        
     }
 
     public bool IsOpen()
     {
         return inventoryWindow.activeInHierarchy;
     }
-    
+
     public void AddItem(ItemData item)
+    {
+        AddItem(item, 1);
+    }
+
+    public void AddItem(ItemData item, int count)
     {
         if (item.canStack)
         {
             ItemSlot slotToStackTo = GetItemStack(item);
-            if(slotToStackTo != null)
+            if (slotToStackTo != null)
             {
-                slotToStackTo.quantity++;
+                slotToStackTo.quantity += count;
                 UpdateUI();
                 return;
             }
@@ -110,10 +118,10 @@ public class Inventory : MonoBehaviour
 
         ItemSlot emptySlot = GetEmptySlot();
 
-        if(emptySlot != null)
+        if (emptySlot != null)
         {
             emptySlot.item = item;
-            emptySlot.quantity = 1;
+            emptySlot.quantity = count;
             UpdateUI();
             return;
         }
@@ -128,7 +136,7 @@ public class Inventory : MonoBehaviour
 
     void UpdateUI()
     {
-        for(int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].item != null)
                 uiSlots[i].Set(slots[i]);
@@ -137,9 +145,9 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    ItemSlot GetItemStack (ItemData item)
+    public ItemSlot GetItemStack(ItemData item)
     {
-        for(int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].item == item && slots[i].quantity < item.maxStackAmount)
                 return slots[i];
@@ -159,7 +167,7 @@ public class Inventory : MonoBehaviour
         return null;
     }
 
-    public  void SelectItem(int index)
+    public void SelectItem(int index)
     {
         if (slots[index].item == null)
             return;
@@ -202,7 +210,7 @@ public class Inventory : MonoBehaviour
 
     public void OnUseButton()
     {
-        if(selectedItem.item.type == ItemType.Consumable)
+        if (selectedItem.item.type == ItemType.Consumable)
         {
             for (int i = 0; i < selectedItem.item.consumables.Length; i++)
             {
@@ -258,7 +266,7 @@ public class Inventory : MonoBehaviour
     {
         selectedItem.quantity--;
 
-        if(selectedItem.quantity <= 0)
+        if (selectedItem.quantity <= 0)
         {
             if (uiSlots[selectedItemIndex].equipped)
             {
@@ -280,5 +288,53 @@ public class Inventory : MonoBehaviour
     public bool HasItems(ItemData item, int quantity)
     {
         return false;
+    }
+
+
+    public bool CheckCraftRequireItem(RequireItem[] reqItem)
+    {
+        foreach (RequireItem requireItem in reqItem)
+        {
+            ItemSlot slotToStackTo = GetItemStack(requireItem.reqItem);
+            if (slotToStackTo == null)
+                return false;
+
+            if (slotToStackTo.quantity < requireItem.reqItemCnt)
+                return false;
+        }
+
+        return true;
+    }
+
+    public void CraftItem(CraftData craftItem)
+    {
+        foreach (RequireItem requireItem in craftItem.reqItem)
+        {
+            ItemSlot slot = GetItemStack(requireItem.reqItem);
+            slot.quantity -= requireItem.reqItemCnt;
+            if (slot.quantity <= 0)
+            {
+                // TODO : 재료 0 처리
+                slot.item = null;
+            }
+        }
+        AddItem(craftItem.targetItem, craftItem.resultCnt);
+        UpdateUI();
+    }
+
+    //아이템을 가지고 있는지 확인
+    public bool CheckHaveItem(int itemIndexNumber)
+    {
+        for(int i = 0; i<slots.Length; i++)
+        {
+            ItemData itemData = slots[i].item;
+            
+            if(itemData != null && itemData.id == itemIndexNumber)
+            {
+                return true;
+            }
+        }
+        return false;
+
     }
 }

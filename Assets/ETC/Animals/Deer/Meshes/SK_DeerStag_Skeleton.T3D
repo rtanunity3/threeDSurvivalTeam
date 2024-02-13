@@ -1,0 +1,4 @@
+Begin Object Class=/Script/Engine.Skeleton Name="SK_DeerStag_Skeleton"
+   BoneTree(30)=()
+   PreviewSkeletalMesh="/Game/AnimalVarietyPack/DeerStagAndDoe/Meshes/SK_DeerStag.SK_DeerStag"
+End Object

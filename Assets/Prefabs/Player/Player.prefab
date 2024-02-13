@@ -29,10 +29,42 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8718235454060957295}
+  - {fileID: 3609052547836790587}
   - {fileID: 6342678658828195853}
   m_Father: {fileID: 773924945231310890}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1364507912947388834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3609052547836790587}
+  m_Layer: 7
+  m_Name: ArrowAniPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3609052547836790587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364507912947388834}
+  m_LocalRotation: {x: -0, y: 0.19509031, z: -0, w: 0.98078537}
+  m_LocalPosition: {x: 0.37, y: -0.245, z: 0.484}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8700142680783433598}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 22.5, z: 0}
 --- !u!1 &2135958392023107557
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 773924945231310890}
   - component: {fileID: 2303008549956934617}
+  - component: {fileID: 1803283960725641867}
   - component: {fileID: 7578668482342650803}
   - component: {fileID: 1769165800147065783}
   - component: {fileID: 6918019833833188538}
@@ -74,7 +107,7 @@ Transform:
   - {fileID: 8700142680783433598}
   - {fileID: 6915865109082298236}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2303008549956934617
 MonoBehaviour:
@@ -103,6 +136,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  slots: []
   inventoryWindow: {fileID: 0}
   dropPosition: {fileID: 6915865109082298236}
   selectedItemName: {fileID: 0}
@@ -119,6 +153,22 @@ MonoBehaviour:
   onCloseInventory:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1803283960725641867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135958392023107557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f547f8b68552b77419b935e427ec2d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CraftRecipeList:
+  - {fileID: 11400000, guid: 48a3da142d7c5b548993057c9ebcc492, type: 2}
+  - {fileID: 11400000, guid: a2ce416a8433cc64589430eeb5ef299d, type: 2}
+  recipeWindow: {fileID: 0}
 --- !u!114 &7578668482342650803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +224,13 @@ MonoBehaviour:
     regenRate: 5
     decayRate: 0
     uiBar: {fileID: 0}
+  temperature:
+    curValue: 0
+    maxValue: 100
+    startValue: 100
+    regenRate: 5
+    decayRate: 0
+    uiBar: {fileID: 0}
   noHungerHealthDecay: 2
   onTakeDamage:
     m_PersistentCalls:
@@ -190,6 +247,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  dayNightCycle: {fileID: 0}
 --- !u!114 &6918019833833188538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curEquip: {fileID: 0}
   equipParent: {fileID: 6342678658828195853}
+  ArrowSpawnPosition: {fileID: 0}
 --- !u!136 &9162710315072646708
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -393,6 +452,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ccbef169-5c40-4c37-8542-6eeeb6a1109a
     m_ActionName: Player/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: f547f8b68552b77419b935e427ec2d29, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 42d25b4d-567e-4316-8442-4b6a2c1efb6c
+    m_ActionName: Player/Craft[/Keyboard/c]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -671,7 +746,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 503
+    m_Bits: 1527
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
