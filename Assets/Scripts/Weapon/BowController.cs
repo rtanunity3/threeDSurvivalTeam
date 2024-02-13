@@ -1,27 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
 
 public class BowController : Equip
 {
-    public float attackRate;
+    [Header("Attack Status")]
+    [SerializeField] private float attackRate;
     private bool attacking;
-    public float useStamina;
+    [SerializeField] private float useStamina;
+
+    [Header("Setting")]
+    [SerializeField] private GameObject arrowObject;
+    public GameObject arrowSpawnPosition;
+
+    private Inventory inventroyScript;
+
+    private void Awake()
+    {
+        inventroyScript = GameManager.Instance.playerObject.GetComponent<Inventory>();
+    }
 
 
+    //공격
     public override void OnAttackInput(PlayerConditions conditions)
     {
         if (!attacking)
         {
             if (conditions.UseStamina(useStamina))
             {
-                attacking = true;
                 //animator.SetTrigger("Attack");
-                Invoke("OnCanAttack", attackRate);
-                Debug.Log("활 공격");
+                if(inventroyScript.CheckHaveItem(332))
+                {
+                    attacking = true;
+                    Invoke("OnCanAttack", attackRate);
+                    Debug.Log("활 공격");
+                }
+                else if(!inventroyScript.CheckHaveItem(332))
+                {
+                    Debug.Log("화살 없음");
+                }    
             }
         }
     }
-     
+    
+    
+
     void OnCanAttack() => attacking = false;
 }

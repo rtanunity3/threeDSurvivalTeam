@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ac462d3b05f4d15a0ff3375321635f, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: 
+  id: 320
   displayName: "\uB3C4\uB07C"
   description: "\uC790\uC6D0\uC744 \uCC44\uCDE8\uD560\uB54C \uC0AC\uC6A9\uD569\uB2C8\uB2E4."
   type: 1
