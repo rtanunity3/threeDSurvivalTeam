@@ -8145,18 +8145,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1913518268}
     - target: {fileID: 1769165800147065783, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
-      propertyPath: temperature.maxValue
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1769165800147065783, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
-      propertyPath: temperature.regenRate
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1769165800147065783, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
-      propertyPath: temperature.startValue
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1769165800147065783, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
       propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1783923310}
