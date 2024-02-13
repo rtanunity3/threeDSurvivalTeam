@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
+[System.Serializable]
 public class ItemSlot
 {
     public ItemData item;
@@ -279,6 +281,21 @@ public class Inventory : MonoBehaviour
 
     public bool HasItems(ItemData item, int quantity)
     {
+        return false;
+    }
+
+    //아이템을 가지고 있는지 확인
+    public bool CheckHaveItem(int itemIndexNumber)
+    {
+        for(int i = 0; i<slots.Length; i++)
+        {
+            ItemData itemData = slots[i].item;
+            
+            if(itemData != null && itemData.id == itemIndexNumber)
+            {
+                return true;
+            }
+        }
         return false;
     }
 }
