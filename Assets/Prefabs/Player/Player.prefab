@@ -75,6 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 773924945231310890}
   - component: {fileID: 2303008549956934617}
+  - component: {fileID: 1803283960725641867}
   - component: {fileID: 7578668482342650803}
   - component: {fileID: 1769165800147065783}
   - component: {fileID: 6918019833833188538}
@@ -152,6 +153,22 @@ MonoBehaviour:
   onCloseInventory:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1803283960725641867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135958392023107557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f547f8b68552b77419b935e427ec2d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CraftRecipeList:
+  - {fileID: 11400000, guid: 48a3da142d7c5b548993057c9ebcc492, type: 2}
+  - {fileID: 11400000, guid: a2ce416a8433cc64589430eeb5ef299d, type: 2}
+  recipeWindow: {fileID: 0}
 --- !u!114 &7578668482342650803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,6 +452,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ccbef169-5c40-4c37-8542-6eeeb6a1109a
     m_ActionName: Player/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: f547f8b68552b77419b935e427ec2d29, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 42d25b4d-567e-4316-8442-4b6a2c1efb6c
+    m_ActionName: Player/Craft[/Keyboard/c]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

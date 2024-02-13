@@ -9,7 +9,7 @@ public class Footsteps : MonoBehaviour
     private Rigidbody _rigidbody;
     public float footstepThreshold;
     public float footstepRate;
-    private float lasgFootstepTime;
+    private float lastFootstepTime;
 
     private void Start()
     {
@@ -23,9 +23,9 @@ public class Footsteps : MonoBehaviour
         {
             if(_rigidbody.velocity.magnitude > footstepThreshold)
             {
-                if(Time.time - lasgFootstepTime > footstepRate)
+                if(Time.time - lastFootstepTime > footstepRate)
                 {
-                    lasgFootstepTime = Time.time;
+                    lastFootstepTime = Time.time;
                     audioSource.PlayOneShot(footstepClips[Random.Range(0, footstepClips.Length)]);
                 }
             }

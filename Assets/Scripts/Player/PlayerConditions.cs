@@ -103,7 +103,7 @@ public class PlayerConditions : MonoBehaviour, IDamagable
 
     public void Die()
     {
-        Debug.Log("플레이어 사망");
+        //Debug.Log("플레이어 사망");
     }
 
     public void TakePhysicalDamage(int damageAmount)
