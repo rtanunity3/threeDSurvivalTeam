@@ -320,6 +320,7 @@ public class Inventory : MonoBehaviour
         }
         AddItem(craftItem.targetItem, craftItem.resultCnt);
         UpdateUI();
+    }
 
     //아이템을 가지고 있는지 확인
     public bool CheckHaveItem(int itemIndexNumber)
