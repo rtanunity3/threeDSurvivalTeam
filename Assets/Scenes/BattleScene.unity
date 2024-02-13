@@ -9909,6 +9909,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1364507912947388834, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_Name
+      value: ArrowSpawnPos
+      objectReference: {fileID: 0}
     - target: {fileID: 1769165800147065783, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
       propertyPath: health.uiBar
       value: 
@@ -10021,6 +10025,38 @@ PrefabInstance:
       propertyPath: selectedItemDescription
       value: 
       objectReference: {fileID: 1192536474}
+    - target: {fileID: 3609052547836790587, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609052547836790587, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609052547836790587, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609052547836790587, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609052547836790587, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609052547836790587, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609052547836790587, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609052547836790587, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6918019833833188538, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
       propertyPath: promptText
       value: 

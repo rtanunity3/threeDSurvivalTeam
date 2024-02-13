@@ -9,6 +9,7 @@ public class BowController : Equip
     [SerializeField] private float attackRate;
     private bool attacking;
     [SerializeField] private float useStamina;
+    public float arrowForce;
 
     [Header("Setting")]
     [SerializeField] private GameObject ProjectileObject;
@@ -17,6 +18,7 @@ public class BowController : Equip
 
     private Animator animator;
     private Inventory inventroyScript;
+    
 
     private void Awake()
     {
@@ -57,10 +59,17 @@ public class BowController : Equip
     //화살 발사 로직
     private IEnumerator Shooting()
     {
+        float forceTime = 0;
         while (true)
         {
+            forceTime = (forceTime < 2) ? forceTime += Time.deltaTime : forceTime = 2;
+
             if (Input.GetMouseButtonUp(0))
+            {
+                arrowForce = forceTime;
                 break;
+            }
+
             yield return null;
         }
 
