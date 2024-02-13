@@ -103,7 +103,7 @@ public class Inventory : MonoBehaviour
             if(slotToStackTo != null)
             {
                 slotToStackTo.quantity++;
-                UPdateUI();
+                UpdateUI();
                 return;
             }
         }
@@ -114,7 +114,7 @@ public class Inventory : MonoBehaviour
         {
             emptySlot.item = item;
             emptySlot.quantity = 1;
-            UPdateUI();
+            UpdateUI();
             return;
         }
 
@@ -126,7 +126,7 @@ public class Inventory : MonoBehaviour
         Instantiate(item.dropPrefab, dropPosition.position, Quaternion.Euler(Vector3.one * Random.value * 360f));
     }
 
-    void UPdateUI()
+    void UpdateUI()
     {
         for(int i = 0; i < slots.Length; i++)
         {
@@ -228,7 +228,7 @@ public class Inventory : MonoBehaviour
         uiSlots[selectedItemIndex].equipped = true;
         curEquipIndex = selectedItemIndex;
         EquipManager.instance.EquipNew(selectedItem.item);
-        UPdateUI();
+        UpdateUI();
 
         SelectItem(selectedItemIndex);
     }
@@ -237,7 +237,7 @@ public class Inventory : MonoBehaviour
     {
         uiSlots[index].equipped = false;
         EquipManager.instance.UnEquip();
-        UPdateUI();
+        UpdateUI();
 
         if (selectedItemIndex == index)
             SelectItem(index);
@@ -269,7 +269,7 @@ public class Inventory : MonoBehaviour
             ClearSelectItemWindow();
         }
 
-        UPdateUI();
+        UpdateUI();
     }
 
     public void RemoveItem(ItemData item)
