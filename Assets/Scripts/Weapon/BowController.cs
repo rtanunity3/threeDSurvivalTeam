@@ -11,16 +11,23 @@ public class BowController : Equip
     [SerializeField] private float useStamina;
 
     [Header("Setting")]
-    [SerializeField] private GameObject arrowObject;
-    public GameObject arrowSpawnPosition;
+    [SerializeField] private GameObject ProjectileObject;
+    public GameObject arrowSpawnObject;
+    public GameObject projectileAnimationObject;
 
+    private Animator animator;
     private Inventory inventroyScript;
 
     private void Awake()
     {
         inventroyScript = GameManager.Instance.playerObject.GetComponent<Inventory>();
+        animator = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        arrowSpawnObject = EquipManager.instance.ArrowSpawnPosition;
+    }
 
     //공격
     public override void OnAttackInput(PlayerConditions conditions)
@@ -29,22 +36,39 @@ public class BowController : Equip
         {
             if (conditions.UseStamina(useStamina))
             {
-                //animator.SetTrigger("Attack");
-                if(inventroyScript.CheckHaveItem(332))
+                if (inventroyScript.CheckHaveItem(332))
                 {
+                    animator.SetBool("Shoot", true);
                     attacking = true;
+
+                    StartCoroutine(Shooting());
+
                     Invoke("OnCanAttack", attackRate);
                     Debug.Log("활 공격");
                 }
-                else if(!inventroyScript.CheckHaveItem(332))
+                else if (!inventroyScript.CheckHaveItem(332))
                 {
                     Debug.Log("화살 없음");
-                }    
+                }
             }
         }
     }
-    
-    
+
+    //화살 발사 로직
+    private IEnumerator Shooting()
+    {
+        while (true)
+        {
+            if (Input.GetMouseButtonUp(0))
+                break;
+            yield return null;
+        }
+
+        Instantiate(ProjectileObject, arrowSpawnObject.transform);
+        animator.SetBool("Shoot", false);
+        projectileAnimationObject.SetActive(false);
+        yield return null;
+    }
 
     void OnCanAttack() => attacking = false;
 }
