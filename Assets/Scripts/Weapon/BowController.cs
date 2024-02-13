@@ -28,7 +28,7 @@ public class BowController : Equip
 
     private void Start()
     {
-        arrowSpawnObject = EquipManager.instance.ArrowSpawnPosition;
+        arrowSpawnObject = EquipManager.instance.ArrowSpawnObject;
     }
 
     //공격
@@ -46,7 +46,6 @@ public class BowController : Equip
                     StartCoroutine(Shooting());
 
                     Invoke("OnCanAttack", attackRate);
-                    Debug.Log("활 공격");
                 }
                 else if (!inventroyScript.CheckHaveItem(332))
                 {
@@ -73,9 +72,11 @@ public class BowController : Equip
             yield return null;
         }
 
-        Instantiate(ProjectileObject, arrowSpawnObject.transform);
+        //화살 생성
+        GameObject arrow = Instantiate(ProjectileObject);
+        arrow.GetComponent<TrailRenderer>().enabled = true;
+        StartCoroutine(arrow.GetComponent<Arrow>().DestroyObject());
         animator.SetBool("Shoot", false);
-        projectileAnimationObject.SetActive(false);
         yield return null;
     }
 

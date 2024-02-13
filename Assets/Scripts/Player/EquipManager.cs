@@ -7,7 +7,7 @@ public class EquipManager : MonoBehaviour
 {
     public Equip curEquip;
     public Transform equipParent;
-    public GameObject ArrowSpawnPosition;
+    public GameObject ArrowSpawnObject;
     
 
     // singleton

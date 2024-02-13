@@ -15,12 +15,34 @@ public class Arrow : Projectile
 
     private void Start()
     {
+        //화살 생성 좌표
+        transform.position = EquipManager.instance.ArrowSpawnObject.transform.position;
+        transform.rotation = EquipManager.instance.ArrowSpawnObject.transform.rotation;
+
         //기모으는 시간 곱적용
         projectile_Speed *= bowController.arrowForce;
         Shoot();
     }
-    public void Shoot()
+
+    //velocity가 가리키는 방향을 바라보게 설정
+    private void Update()
     {
-        rigid.AddForce(Camera.main.ScreenPointToRay(Input.mousePosition).direction * projectile_Speed, ForceMode.Impulse);
+        if (rigid.velocity != Vector3.zero) { transform.rotation = Quaternion.LookRotation(rigid.velocity); }
+    }
+
+    public void Shoot() => rigid.AddForce(transform.forward * projectile_Speed, ForceMode.Impulse);
+    public IEnumerator DestroyObject()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Animal"))
+        {
+            other.GetComponent<AnimalController>().TakePhysicalDamage(projectile_Damage);
+            Debug.Log("명중");
+        }
     }
 }
