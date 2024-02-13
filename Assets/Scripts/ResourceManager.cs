@@ -3,8 +3,21 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class ResourceManager
-{
+public class ResourceManager : MonoBehaviour
+{    
+    public static ResourceManager Instance { get; private set; }
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public Dictionary<string, Sprite> _sprites = new Dictionary<string, Sprite>();
 
     public T Load<T>(string path) where T : Object
