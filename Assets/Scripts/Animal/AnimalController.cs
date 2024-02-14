@@ -1,7 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -19,7 +16,7 @@ public enum AnimalType
     Carnivore
 }
 
-public class AnimalController : MonoBehaviour, IDamagable
+public class AnimalController : PoolAble, IDamagable
 {
     [Header("Stats")]
     public int health;
