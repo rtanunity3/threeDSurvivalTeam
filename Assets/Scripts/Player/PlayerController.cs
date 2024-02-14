@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody _rigidbody;
 
-    private float repeatInterval = 30.0f;
+    private float repeatInterval = 10.0f;
 
     public static PlayerController instance; // 플레이어 싱글톤
 
