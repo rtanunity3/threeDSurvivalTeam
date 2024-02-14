@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3414934916878135538}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ R Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3365083593391424864}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7038625871590435917}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ R HorseLink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6215046735393274350}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ L Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3395108843966331291}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ L UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 336047692918078781}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8405581610843826075}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ R Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6477261540977329270}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ Tail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5340746033105043321}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ Tail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4382267316300123885}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ Neck2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1593702912096564171}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ R Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2963594372699133696}
   - component: {fileID: 3632635978157424294}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_DeerDoe_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +476,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4179293708407231167}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_DeerDoe_LodGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1571272794588772566}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ Neck1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2825424729914446202}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ L Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7052310443148493687}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ Ponytail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 12847277365372797}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ L Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2002808134338296170}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ R Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,7 +669,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 554468267349052512}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ L Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3707029383841926394}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ R Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8106374185483025339}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -764,7 +764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 456667693530847952}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ R UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -796,7 +796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8450777838806489567}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ R Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -828,7 +828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2606980309056116846}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634535553292486609}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -894,7 +894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2542385216257828896}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ L Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -927,7 +927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7856792651754441258}
   - component: {fileID: 1491065040253581847}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_DeerDoe_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,7 +1042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7235560977516277041}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ L Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,7 +1080,7 @@ GameObject:
   - component: {fileID: 7334171906264184145}
   - component: {fileID: 5372180047096126619}
   - component: {fileID: 1460502371582328015}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_DeerDoe
   m_TagString: Animal
   m_Icon: {fileID: 0}
@@ -1248,7 +1248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7131480724908158155}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1282,7 +1282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3510522832077034201}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ R Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1313,7 +1313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6918520194880145344}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,7 +1346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4632850155053097912}
   - component: {fileID: 2253929491955070793}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_DeerDoe_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1461,7 +1461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2266875412830411073}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1494,7 +1494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7536608117117155116}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ L Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1525,7 +1525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5156373653090622529}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeerDoe_ L HorseLink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2586255827589785071}
   - component: {fileID: 1690394388904731566}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_DeerDoe_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
