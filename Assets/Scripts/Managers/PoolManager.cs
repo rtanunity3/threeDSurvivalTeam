@@ -20,6 +20,8 @@ public class PoolManager : MonoBehaviour
     [SerializeField]
     private ObjectInfo[] objectInfos = null;
 
+    [SerializeField]
+    private GameObject[] TreePrefab;
 
     private Dictionary<string, IObjectPool<PoolAble>> ojbectPoolDic = new Dictionary<string, IObjectPool<PoolAble>>();
 
