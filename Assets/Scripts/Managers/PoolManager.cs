@@ -141,7 +141,7 @@ public class PoolManager : MonoBehaviour
 
         for (int i = 0; i < createNum; ++i)
         {
-            Vector3 randomPosition = Random.onUnitSphere * spawnRadius;
+            Vector3 randomPosition = (Random.onUnitSphere + centerPos) * spawnRadius;
             randomPosition.y = 100f;
 
             GameObject animal = animals[Random.Range(0, animals.Length)].prefab;
