@@ -168,6 +168,7 @@ public class CraftManager : MonoBehaviour
             dialogText.text = "재료가 부족합니다.";
             dialog.SetActive(true);
         }
+        SetSelectedItemInfo(selectedItem);
     }
 }
 
