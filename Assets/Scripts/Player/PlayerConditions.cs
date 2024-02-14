@@ -120,7 +120,7 @@ public class PlayerConditions : MonoBehaviour, IDamagable
 
             if (timeOfNight <= 0.2f || timeOfNight >= 0.8f)
             {
-                Debug.Log(timeOfNight);
+                //Debug.Log(timeOfNight);
                 temperature.Substract(0.01f);
             }
         }

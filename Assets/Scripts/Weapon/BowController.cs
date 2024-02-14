@@ -1,12 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Xml;
 using UnityEngine;
-
-public enum ItemIndex
-{
-    Arrow = 332
-}
+using UnityEngine.Pool;
 
 public class BowController : Equip
 {
@@ -23,7 +17,6 @@ public class BowController : Equip
 
     private Animator animator;
     private Inventory inventroyScript;
-    
 
     private void Awake()
     {
@@ -43,7 +36,7 @@ public class BowController : Equip
         {
             if (conditions.UseStamina(useStamina))
             {
-                if (inventroyScript.CheckHaveItem((int)ItemIndex.Arrow))
+                if (inventroyScript.CheckHaveItem(332))
                 {
                     animator.SetBool("Shoot", true);
                     attacking = true;
@@ -52,7 +45,7 @@ public class BowController : Equip
 
                     Invoke("OnCanAttack", attackRate);
                 }
-                else if (!inventroyScript.CheckHaveItem((int)ItemIndex.Arrow))
+                else if (!inventroyScript.CheckHaveItem(332))
                 {
                     Debug.Log("화살 없음");
                 }
@@ -63,10 +56,7 @@ public class BowController : Equip
     //화살 발사 로직
     private IEnumerator Shooting()
     {
-        //인벤토리 화살 사용
-        Inventory.instance.UseItme((int)ItemIndex.Arrow);
-
-        float forceTime = 0;
+        float forceTime = 0.2f; // 최소 거리
         while (true)
         {
             forceTime = (forceTime < 2) ? forceTime += Time.deltaTime : forceTime = 2;
@@ -81,9 +71,7 @@ public class BowController : Equip
         }
 
         //화살 생성
-        GameObject arrow = Instantiate(ProjectileObject);
-        arrow.GetComponent<TrailRenderer>().enabled = true;
-        StartCoroutine(arrow.GetComponent<Arrow>().DestroyObject());
+        PoolAble arrow = PoolManager.instance.GetPoolAble(ProjectileObject.name);
         animator.SetBool("Shoot", false);
         yield return null;
     }
