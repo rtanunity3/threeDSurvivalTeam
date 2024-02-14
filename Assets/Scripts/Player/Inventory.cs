@@ -20,6 +20,8 @@ public class Inventory : MonoBehaviour
     public ItemSlotUI[] uiSlots;
     public ItemSlot[] slots;
 
+    public ItemData[] initItem;
+
     public GameObject inventoryWindow;
     public Transform dropPosition;
 
@@ -67,6 +69,15 @@ public class Inventory : MonoBehaviour
         }
 
         ClearSelectItemWindow();
+        Init();
+    }
+
+    private void Init()
+    {
+        foreach (var item in initItem)
+        {
+            AddItem(item);
+        }
     }
 
     public void OnInventoryButton(InputAction.CallbackContext callbackContext)

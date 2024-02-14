@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a1a92c72549d954eaba3d7f4ba8e804, type: 3}
-  m_Name: Bow
+  m_Name: Sword
   m_EditorClassIdentifier: 
-  targetItem: {fileID: 11400000, guid: 8ceaa4b78d43cc242a32ed81b4e60b5a, type: 2}
+  targetItem: {fileID: 11400000, guid: 1bc4a2e355e3d4c3aab0ddce80470b33, type: 2}
   resultCnt: 1
   reqItem:
   - reqItem: {fileID: 11400000, guid: 77b885e956f72492ab8514fb068f6b91, type: 2}
+    reqItemCnt: 1
+  - reqItem: {fileID: 11400000, guid: cfed281451436478fa4b0ad4129e9dd6, type: 2}
     reqItemCnt: 2
