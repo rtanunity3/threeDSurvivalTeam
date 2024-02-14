@@ -1,7 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Xml;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class BowController : Equip
 {
@@ -18,7 +17,6 @@ public class BowController : Equip
 
     private Animator animator;
     private Inventory inventroyScript;
-    
 
     private void Awake()
     {
@@ -58,7 +56,7 @@ public class BowController : Equip
     //화살 발사 로직
     private IEnumerator Shooting()
     {
-        float forceTime = 0;
+        float forceTime = 0.2f; // 최소 거리
         while (true)
         {
             forceTime = (forceTime < 2) ? forceTime += Time.deltaTime : forceTime = 2;
@@ -73,9 +71,7 @@ public class BowController : Equip
         }
 
         //화살 생성
-        GameObject arrow = Instantiate(ProjectileObject);
-        arrow.GetComponent<TrailRenderer>().enabled = true;
-        StartCoroutine(arrow.GetComponent<Arrow>().DestroyObject());
+        PoolAble arrow = PoolManager.instance.GetPoolAble(ProjectileObject.name);
         animator.SetBool("Shoot", false);
         yield return null;
     }
