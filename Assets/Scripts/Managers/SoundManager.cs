@@ -11,7 +11,8 @@ public enum EffectSound
     BowHit,
     JDThanks,
     JDHardWork,
-    SwordAttack
+    SwordAttack,
+    AxeSwing
 }
 
 public class SoundManager : MonoBehaviour
