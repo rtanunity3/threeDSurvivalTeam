@@ -23,18 +23,23 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody _rigidbody;
 
-    public static PlayerController instance; // 플레이어 싱글톤
+    private float repeatInterval = 30.0f;
+
+    public static PlayerController instance; // 플레이어 싱글톤
 
     private void Awake()
     {
         instance = this;
         _rigidbody = GetComponent<Rigidbody>();
     }
-    
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+        InvokeRepeating("RespawnAnimal", 0, repeatInterval);
     }
+
     private void FixedUpdate() // 물리적인 처리의 작업들 많이함 
     {
         Move();
@@ -42,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate() // 모든게 끝나고 동작, 보통카메라 작업시 많이 사용 
     {
-        if(canLook)
+        if (canLook)
         {
             CameraLook();
         }
@@ -74,11 +79,11 @@ public class PlayerController : MonoBehaviour
     // 이동처리
     public void OnMoveInput(InputAction.CallbackContext context)
     {
-        if(context.phase == InputActionPhase.Performed)
+        if (context.phase == InputActionPhase.Performed)
         {
             curMovementInput = context.ReadValue<Vector2>();
         }
-        else if( context.phase == InputActionPhase.Canceled)
+        else if (context.phase == InputActionPhase.Canceled)
         {
             curMovementInput = Vector2.zero;
         }
@@ -87,7 +92,7 @@ public class PlayerController : MonoBehaviour
     // 점프
     public void OnJumpInput(InputAction.CallbackContext context)
     {
-        if(context.phase == InputActionPhase.Started)
+        if (context.phase == InputActionPhase.Started)
         {
             if (IsGrounded()) // 점프시 땅을 밟고있을때만 하게끔함 , 개인적으로 없는게 더 재밌음 
                 _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode.Impulse); // impulse 는 질량을 갖고 처리한다 
@@ -104,14 +109,14 @@ public class PlayerController : MonoBehaviour
             new Ray(transform.position + (-transform.right * 0.2f) + (Vector3.up * 0.01f), Vector3.down),
         };
 
-        for(int i = 0; i < rays.Length; i++) // 배열나오면 반복문, 배열과같은 선형구조는 length, 리스트는 count 
+        for (int i = 0; i < rays.Length; i++) // 배열나오면 반복문, 배열과같은 선형구조는 length, 리스트는 count 
         {
-            if(Physics.Raycast(rays[i], 0.1f, groundLayerMask))
+            if (Physics.Raycast(rays[i], 0.1f, groundLayerMask))
             {
                 return true;
             }
         }
-        return false; // 하나라도 땅에 닿으면 true 아니면 false 
+        return false; // 하나라도 땅에 닿으면 true 아니면 false 
     }
 
     private void OnDrawGizmos()
@@ -127,5 +132,21 @@ public class PlayerController : MonoBehaviour
     {
         Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked;
         canLook = !toggle;
+    }
+
+    public void RespawnAnimal()
+    {
+        int animalLayerMask = 1 << LayerMask.NameToLayer("Animal"); // 변경하려는 레이어 이름으로 대체하세요.
+
+        float checkRadius = 50.0f; // 검사하려는 범위 반지름
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, checkRadius, animalLayerMask);
+        int numberOfObjects = hitColliders.Length;
+        Debug.LogWarning("Number of objects in range: " + numberOfObjects);
+
+        if (numberOfObjects < 3)
+        {
+            // 동물 생성 요청
+            PoolManager.instance.RespawnAnimal(transform.position);
+        }
     }
 }

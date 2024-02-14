@@ -7,7 +7,8 @@ public class ObjectInfo
 {
     public string objectName;
     public GameObject prefab;
-    public int count;
+    public int defaultCapacity;
+    public int maxSize;
 }
 
 
@@ -17,10 +18,12 @@ public class PoolManager : MonoBehaviour
 
     [SerializeField]
     private ObjectInfo[] objectInfos = null;
+    private ObjectInfo[] Animals = null;
 
     [HideInInspector]
     public Queue<GameObject> TreePrefabQ = new Queue<GameObject>();
     private float repeatInterval = 10.0f;
+    private float spawnRadius = 50f;
 
     private Dictionary<string, IObjectPool<PoolAble>> ojbectPoolDic = new Dictionary<string, IObjectPool<PoolAble>>();
 
@@ -50,9 +53,10 @@ public class PoolManager : MonoBehaviour
         for (int idx = 0; idx < objectInfos.Length; idx++)
         {
             ObjectInfo tmpObjInfo = objectInfos[idx];
-            IObjectPool<PoolAble> pool = new ObjectPool<PoolAble>(() => CreatePooledItem(tmpObjInfo), OnGetFromPool
+            IObjectPool<PoolAble> pool = new ObjectPool<PoolAble>(() =>
+            CreatePooledItem(tmpObjInfo), OnGetFromPool
                 , OnReleaseToPool, OnDestroyPoolObject
-                , true, objectInfos[idx].count, 20);
+                , true, objectInfos[idx].defaultCapacity, objectInfos[idx].maxSize);
 
             if (ojbectPoolDic.ContainsKey(objectInfos[idx].objectName))
             {
@@ -101,7 +105,7 @@ public class PoolManager : MonoBehaviour
         return ojbectPoolDic[objectName].Get();
     }
 
-    
+
     private void RespawnTree()
     {
         if (TreePrefabQ.Count > 0)
@@ -109,6 +113,21 @@ public class PoolManager : MonoBehaviour
             GameObject tree = TreePrefabQ.Dequeue();
             tree.gameObject.SetActive(true);
         }
+    }
+
+    public void RespawnAnimal(Vector3 centerPos)
+    {
+
+        //Vector3 randomPosition = Random.onUnitSphere * spawnRadius;
+        //randomPosition.y = 100f;
+
+        //Ray ray = new Ray(randomPosition, Vector3.down);
+        //RaycastHit hit;
+        //if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        //{
+        //    randomPosition.y = hit.point.y;
+        //    Instantiate(myPrefab, randomPosition, Quaternion.identity);
+        //}
     }
 }
 

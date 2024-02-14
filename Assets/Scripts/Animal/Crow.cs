@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Crow : MonoBehaviour, IDamagable
+public class Crow : PoolAble, IDamagable
 {
     [Header("Stats")]
     public int health;
@@ -17,7 +17,7 @@ public class Crow : MonoBehaviour, IDamagable
     {
         meshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
     }
-   
+
     public void TakePhysicalDamage(int damageAmount)
     {
         health -= damageAmount;
