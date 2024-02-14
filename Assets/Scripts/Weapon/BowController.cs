@@ -44,6 +44,7 @@ public class BowController : Equip
                 if (inventroyScript.CheckHaveItem((int)ItemIndex.Arrow))
                 {
                     animator.SetBool("Shoot", true);
+                    SoundManager.instacne.PlayEffectSound(EffectSound.BowString);
                     attacking = true;
 
                     StartCoroutine(Shooting());
@@ -71,6 +72,7 @@ public class BowController : Equip
 
             if (Input.GetMouseButtonUp(0))
             {
+                SoundManager.instacne.PlayEffectSound(EffectSound.BowFire);
                 arrowForce = forceTime;
                 break;
             }
