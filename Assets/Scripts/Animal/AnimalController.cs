@@ -231,7 +231,7 @@ public class AnimalController : MonoBehaviour, IDamagable
         NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * safeDistance), out hit, maxWanderDistance, NavMesh.AllAreas);
 
         int i = 0;
-        while (GetDesinationAngle(hit.position) > 90 || playerDistance < safeDistance)
+        while (GetDestinationAngle(hit.position) > 90 || playerDistance < safeDistance)
         {
             NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
             i++;
@@ -242,8 +242,9 @@ public class AnimalController : MonoBehaviour, IDamagable
         return hit.position;
     }
 
-    float GetDesinationAngle(Vector3 targetPos)
+    float GetDestinationAngle(Vector3 targetPos)
     {
+        // (동물 좌표 - 플레이어 좌표), (동물 좌표 + 이동좌표) 백터간의 각도
         return Vector3.Angle(transform.position - PlayerController.instance.transform.position, transform.position + targetPos);
     }
 
