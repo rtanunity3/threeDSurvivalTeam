@@ -877,31 +877,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f605253ca600348b1ae381c18ae57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectInfos:
+  projectile:
   - objectName: Projectile_Arrow
     prefab: {fileID: 7078025699278178617, guid: 1e064f3e203f7154f8f62950aec62b35, type: 3}
     defaultCapacity: 3
     maxSize: 10
+  animals:
   - objectName: Wolf_Dark
     prefab: {fileID: 8080992133685848900, guid: e6247f8fec9a1b8489f0baf2aba78df1, type: 3}
     defaultCapacity: 1
-    maxSize: 3
+    maxSize: 5
   - objectName: Wolf_Base
     prefab: {fileID: 2539572266753345197, guid: 9b98eca47dbbcc344b8726468d9d8e07, type: 3}
     defaultCapacity: 1
-    maxSize: 3
+    maxSize: 5
   - objectName: Wolf_Arctic
     prefab: {fileID: 8762983305039812997, guid: 3cd0621b7cbfe2e4baf2b65579af8aa2, type: 3}
     defaultCapacity: 1
-    maxSize: 3
+    maxSize: 5
   - objectName: SK_DeerStag
     prefab: {fileID: 386460081639523482, guid: 9a9d6b853bb37ab439f71050cb611b85, type: 3}
     defaultCapacity: 1
-    maxSize: 4
+    maxSize: 5
   - objectName: SK_DeerDoe
     prefab: {fileID: 7914940646799923894, guid: b8456a6f5a79fde44a69d3bccaa65cb5, type: 3}
     defaultCapacity: 1
-    maxSize: 4
+    maxSize: 5
   - objectName: Crow
     prefab: {fileID: 4892517805173132322, guid: 69afafcce5de4124f941c31c96caa366, type: 3}
     defaultCapacity: 1

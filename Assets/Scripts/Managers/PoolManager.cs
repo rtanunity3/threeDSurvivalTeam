@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 using UnityEngine.Pool;
 
 [System.Serializable]
@@ -17,8 +18,9 @@ public class PoolManager : MonoBehaviour
     public static PoolManager instance;
 
     [SerializeField]
-    private ObjectInfo[] objectInfos = null;
-    private ObjectInfo[] Animals = null;
+    private ObjectInfo[] projectile = null;
+    [SerializeField]
+    private ObjectInfo[] animals = null;
 
     [HideInInspector]
     public Queue<GameObject> TreePrefabQ = new Queue<GameObject>();
@@ -50,21 +52,38 @@ public class PoolManager : MonoBehaviour
     private void InitObjectPool()
     {
         //Debug.LogWarning(objectInfos.Length);
-        for (int idx = 0; idx < objectInfos.Length; idx++)
+        for (int idx = 0; idx < projectile.Length; idx++)
         {
-            ObjectInfo tmpObjInfo = objectInfos[idx];
+            ObjectInfo tmpObjInfo = projectile[idx];
             IObjectPool<PoolAble> pool = new ObjectPool<PoolAble>(() =>
             CreatePooledItem(tmpObjInfo), OnGetFromPool
                 , OnReleaseToPool, OnDestroyPoolObject
-                , true, objectInfos[idx].defaultCapacity, objectInfos[idx].maxSize);
+                , true, projectile[idx].defaultCapacity, projectile[idx].maxSize);
 
-            if (ojbectPoolDic.ContainsKey(objectInfos[idx].objectName))
+            if (ojbectPoolDic.ContainsKey(projectile[idx].objectName))
             {
-                Debug.LogFormat("{0} 이미 등록된 오브젝트입니다.", objectInfos[idx].objectName);
+                Debug.LogFormat("{0} 이미 등록된 오브젝트입니다.", projectile[idx].objectName);
                 return;
             }
 
-            ojbectPoolDic.Add(objectInfos[idx].objectName, pool);
+            ojbectPoolDic.Add(projectile[idx].objectName, pool);
+        }
+
+        for (int idx = 0; idx < animals.Length; idx++)
+        {
+            ObjectInfo tmpObjInfo = animals[idx];
+            IObjectPool<PoolAble> pool = new ObjectPool<PoolAble>(() =>
+            CreatePooledItem(tmpObjInfo), OnGetFromPool
+                , OnReleaseToPool, OnDestroyPoolObject
+                , true, animals[idx].defaultCapacity, animals[idx].maxSize);
+
+            if (ojbectPoolDic.ContainsKey(animals[idx].objectName))
+            {
+                Debug.LogFormat("{0} 이미 등록된 오브젝트입니다.", animals[idx].objectName);
+                return;
+            }
+
+            ojbectPoolDic.Add(animals[idx].objectName, pool);
         }
     }
 
@@ -118,16 +137,23 @@ public class PoolManager : MonoBehaviour
     public void RespawnAnimal(Vector3 centerPos)
     {
 
-        //Vector3 randomPosition = Random.onUnitSphere * spawnRadius;
-        //randomPosition.y = 100f;
+        int createNum = Random.Range(1, 4);
 
-        //Ray ray = new Ray(randomPosition, Vector3.down);
-        //RaycastHit hit;
-        //if (Physics.Raycast(ray, out hit, Mathf.Infinity))
-        //{
-        //    randomPosition.y = hit.point.y;
-        //    Instantiate(myPrefab, randomPosition, Quaternion.identity);
-        //}
+        for (int i = 0; i < createNum; ++i)
+        {
+            Vector3 randomPosition = Random.onUnitSphere * spawnRadius;
+            randomPosition.y = 100f;
+
+            GameObject animal = animals[Random.Range(0, animals.Length)].prefab;
+
+            Ray ray = new Ray(randomPosition, Vector3.down);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            {
+                randomPosition.y = hit.point.y;
+                Instantiate(animal, randomPosition, Quaternion.identity);
+            }
+        }
     }
 }
 
