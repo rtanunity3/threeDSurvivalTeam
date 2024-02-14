@@ -61,7 +61,7 @@ public class Arrow : Projectile
     {
         rigid.AddForce(transform.forward * calcSpeed, ForceMode.Impulse);
     }
-    
+
 
     public void DestroyArrow()
     {
@@ -82,7 +82,11 @@ public class Arrow : Projectile
     {
         if (other.CompareTag("Animal"))
         {
-            other.GetComponent<AnimalController>().TakePhysicalDamage(projectile_Damage);
+            AnimalController animalController = other.GetComponent<AnimalController>();
+
+            if (animalController != null)
+                other.GetComponent<AnimalController>().TakePhysicalDamage(projectile_Damage);
+            else { other.GetComponent<Crow>().TakePhysicalDamage(projectile_Damage); }
         }
 
         if (other.CompareTag("Ground"))

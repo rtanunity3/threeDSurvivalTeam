@@ -325,16 +325,37 @@ public class Inventory : MonoBehaviour
     //아이템을 가지고 있는지 확인
     public bool CheckHaveItem(int itemIndexNumber)
     {
-        for(int i = 0; i<slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             ItemData itemData = slots[i].item;
-            
-            if(itemData != null && itemData.id == itemIndexNumber)
+            if (itemData != null)
             {
-                return true;
+                if (itemData.id == itemIndexNumber)
+                    return true;
             }
         }
         return false;
+    }
 
+    //아이템 사용
+    public void UseItme(int itemindexNumber)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            ItemData itemData = slots[i].item;
+
+            if (itemData != null)
+            {
+                if (itemData.id == itemindexNumber)
+                {
+                    //갯수 줄이기
+                    slots[i].quantity -= 1;
+                    if (slots[i].quantity <= 0)
+                        slots[i].item = null;
+
+                    UpdateUI();
+                }
+            }
+        }
     }
 }

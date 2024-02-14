@@ -2,6 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Pool;
 
+public enum ItemIndex
+{
+    Arrow = 332
+}
+
 public class BowController : Equip
 {
     [Header("Attack Status")]
@@ -36,7 +41,7 @@ public class BowController : Equip
         {
             if (conditions.UseStamina(useStamina))
             {
-                if (inventroyScript.CheckHaveItem(332))
+                if (inventroyScript.CheckHaveItem((int)ItemIndex.Arrow))
                 {
                     animator.SetBool("Shoot", true);
                     attacking = true;
@@ -45,7 +50,7 @@ public class BowController : Equip
 
                     Invoke("OnCanAttack", attackRate);
                 }
-                else if (!inventroyScript.CheckHaveItem(332))
+                else if (!inventroyScript.CheckHaveItem((int)ItemIndex.Arrow))
                 {
                     Debug.Log("화살 없음");
                 }
@@ -56,6 +61,9 @@ public class BowController : Equip
     //화살 발사 로직
     private IEnumerator Shooting()
     {
+        //화살소모
+        Inventory.instance.UseItme((int)ItemIndex.Arrow);
+
         float forceTime = 0.2f; // 최소 거리
         while (true)
         {

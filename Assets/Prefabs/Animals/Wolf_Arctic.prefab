@@ -1615,7 +1615,7 @@ GameObject:
   - component: {fileID: 6478939905252758206}
   m_Layer: 0
   m_Name: Wolf_Arctic
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1635,7 +1635,7 @@ Transform:
   - {fileID: 2893774841195276183}
   - {fileID: 2954782727277651067}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8428954522125799540
 Animator:
