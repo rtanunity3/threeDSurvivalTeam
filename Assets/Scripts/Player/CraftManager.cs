@@ -108,12 +108,14 @@ public class CraftManager : MonoBehaviour
         {
             recipeWindow.SetActive(false);
             controller.ToggleCursor(false);
+            GameManager.instance.UIDepth--;
         }
-        else
+        else if (GameManager.instance.UIDepth == 0)
         {
             unSelect();
             recipeWindow.SetActive(true);
             controller.ToggleCursor(true);
+            GameManager.instance.UIDepth++;
         }
     }
 

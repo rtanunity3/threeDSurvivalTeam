@@ -84,12 +84,14 @@ public class Inventory : MonoBehaviour
             inventoryWindow.SetActive(false);
             onCloseInventory?.Invoke();
             controller.ToggleCursor(false);
+            GameManager.instance.UIDepth--;
         }
-        else
+        else if (GameManager.instance.UIDepth == 0)
         {
             inventoryWindow.SetActive(true);
             onOpenInventory?.Invoke();
             controller.ToggleCursor(true);
+            GameManager.instance.UIDepth++;
         }
     }
 

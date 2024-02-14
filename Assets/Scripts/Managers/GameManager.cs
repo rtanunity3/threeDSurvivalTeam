@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject playerObject;
 
+    public int UIDepth = 0;
+
     private void Awake()
     {
         if (instance == null)
