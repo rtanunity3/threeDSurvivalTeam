@@ -3924,6 +3924,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 1336161844798844245, guid: 302f9270c40ea514c921b423eea7347c, type: 3}
     - {fileID: 3015481875272181996, guid: 302f9270c40ea514c921b423eea7347c, type: 3}
+    - {fileID: 5862381809667361540, guid: 302f9270c40ea514c921b423eea7347c, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6684317490783831274, guid: 302f9270c40ea514c921b423eea7347c, type: 3}
       insertIndex: -1
@@ -8728,6 +8729,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2135958392023107557, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
   m_PrefabInstance: {fileID: 7559347368760012467}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2122815067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+  m_PrefabInstance: {fileID: 7559347368760012467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122815056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f547f8b68552b77419b935e427ec2d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2133825656
 GameObject:
   m_ObjectHideFlags: 0
@@ -9618,7 +9630,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2122815067}
         m_TargetAssemblyTypeName: CraftManager, Assembly-CSharp
         m_MethodName: Toggle
         m_Mode: 1
@@ -12179,6 +12191,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 497089461103843469, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497089461103843469, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2122815067}
+    - target: {fileID: 497089461103843469, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnCraftButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 497089461103843469, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 497089461103843469, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 722668234711204965, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
       propertyPath: ArrowSpawnObject
       value: 
@@ -12259,6 +12291,58 @@ PrefabInstance:
       propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1783923310}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 6494891325362513190}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: dialog
+      value: 
+      objectReference: {fileID: 3997358838831180674}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: useButton
+      value: 
+      objectReference: {fileID: 4452464195203661110}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 8978848712030781623}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: buttonGroup
+      value: 
+      objectReference: {fileID: 3955260695509110791}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: reqItemList
+      value: 
+      objectReference: {fileID: 361092867391658972}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: quantityText
+      value: 
+      objectReference: {fileID: 1230657143637812930}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: recipeWindow
+      value: 
+      objectReference: {fileID: 5778923917752444076}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: craftItemPrefab
+      value: 
+      objectReference: {fileID: 5939437271227184718, guid: d2918cb8aeb1bac4fb734945250eae10, type: 3}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: craftRecipeListContent
+      value: 
+      objectReference: {fileID: 2993148922392955473}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: craftDataList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: craftDataList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 48a3da142d7c5b548993057c9ebcc492, type: 2}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: craftDataList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a2ce416a8433cc64589430eeb5ef299d, type: 2}
     - target: {fileID: 2135958392023107557, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
       propertyPath: m_Name
       value: Player
