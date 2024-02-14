@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 using UnityEngine.Pool;
 
 [System.Serializable]
@@ -7,7 +8,8 @@ public class ObjectInfo
 {
     public string objectName;
     public GameObject prefab;
-    public int count;
+    public int defaultCapacity;
+    public int maxSize;
 }
 
 
@@ -16,11 +18,14 @@ public class PoolManager : MonoBehaviour
     public static PoolManager instance;
 
     [SerializeField]
-    private ObjectInfo[] objectInfos = null;
+    private ObjectInfo[] projectile = null;
+    [SerializeField]
+    private ObjectInfo[] animals = null;
 
     [HideInInspector]
     public Queue<GameObject> TreePrefabQ = new Queue<GameObject>();
     private float repeatInterval = 10.0f;
+    private float spawnRadius = 50f;
 
     private Dictionary<string, IObjectPool<PoolAble>> ojbectPoolDic = new Dictionary<string, IObjectPool<PoolAble>>();
 
@@ -47,20 +52,38 @@ public class PoolManager : MonoBehaviour
     private void InitObjectPool()
     {
         //Debug.LogWarning(objectInfos.Length);
-        for (int idx = 0; idx < objectInfos.Length; idx++)
+        for (int idx = 0; idx < projectile.Length; idx++)
         {
-            ObjectInfo tmpObjInfo = objectInfos[idx];
-            IObjectPool<PoolAble> pool = new ObjectPool<PoolAble>(() => CreatePooledItem(tmpObjInfo), OnGetFromPool
+            ObjectInfo tmpObjInfo = projectile[idx];
+            IObjectPool<PoolAble> pool = new ObjectPool<PoolAble>(() =>
+            CreatePooledItem(tmpObjInfo), OnGetFromPool
                 , OnReleaseToPool, OnDestroyPoolObject
-                , true, objectInfos[idx].count, 20);
+                , true, projectile[idx].defaultCapacity, projectile[idx].maxSize);
 
-            if (ojbectPoolDic.ContainsKey(objectInfos[idx].objectName))
+            if (ojbectPoolDic.ContainsKey(projectile[idx].objectName))
             {
-                Debug.LogFormat("{0} 이미 등록된 오브젝트입니다.", objectInfos[idx].objectName);
+                Debug.LogFormat("{0} 이미 등록된 오브젝트입니다.", projectile[idx].objectName);
                 return;
             }
 
-            ojbectPoolDic.Add(objectInfos[idx].objectName, pool);
+            ojbectPoolDic.Add(projectile[idx].objectName, pool);
+        }
+
+        for (int idx = 0; idx < animals.Length; idx++)
+        {
+            ObjectInfo tmpObjInfo = animals[idx];
+            IObjectPool<PoolAble> pool = new ObjectPool<PoolAble>(() =>
+            CreatePooledItem(tmpObjInfo), OnGetFromPool
+                , OnReleaseToPool, OnDestroyPoolObject
+                , true, animals[idx].defaultCapacity, animals[idx].maxSize);
+
+            if (ojbectPoolDic.ContainsKey(animals[idx].objectName))
+            {
+                Debug.LogFormat("{0} 이미 등록된 오브젝트입니다.", animals[idx].objectName);
+                return;
+            }
+
+            ojbectPoolDic.Add(animals[idx].objectName, pool);
         }
     }
 
@@ -101,13 +124,40 @@ public class PoolManager : MonoBehaviour
         return ojbectPoolDic[objectName].Get();
     }
 
-    
+
     private void RespawnTree()
     {
         if (TreePrefabQ.Count > 0)
         {
             GameObject tree = TreePrefabQ.Dequeue();
             tree.gameObject.SetActive(true);
+        }
+    }
+
+    public void RespawnAnimal(Vector3 centerPos)
+    {
+
+        int createNum = Random.Range(1, 4);
+        Debug.LogWarning(createNum);
+        for (int i = 0; i < createNum; i++)
+        {
+            Vector3 randomPosition = Random.onUnitSphere * spawnRadius + centerPos;
+            randomPosition.y = 100f;
+
+            GameObject animal = animals[Random.Range(0, animals.Length)].prefab;
+
+            Ray ray = new Ray(randomPosition, Vector3.down);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            {
+                randomPosition.y = hit.point.y;
+                Debug.LogWarning("CreateAnimal " + randomPosition);
+                Instantiate(animal, randomPosition, Quaternion.identity);
+            }
+            else
+            {
+                Debug.LogWarning("Not Hit" + randomPosition);
+            }
         }
     }
 }
