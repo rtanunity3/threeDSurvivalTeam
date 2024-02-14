@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3609052547836790587}
   m_Layer: 7
-  m_Name: ArrowAniPos
+  m_Name: ArrowSpawnPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,14 +57,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364507912947388834}
-  m_LocalRotation: {x: -0, y: 0.19509031, z: -0, w: 0.98078537}
-  m_LocalPosition: {x: 0.37, y: -0.245, z: 0.484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8700142680783433598}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 22.5, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2135958392023107557
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +107,7 @@ Transform:
   - {fileID: 8700142680783433598}
   - {fileID: 6915865109082298236}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2303008549956934617
 MonoBehaviour:
@@ -165,10 +165,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f547f8b68552b77419b935e427ec2d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CraftRecipeList:
+  uiSlots: []
+  slots: []
+  craftDataList:
   - {fileID: 11400000, guid: 48a3da142d7c5b548993057c9ebcc492, type: 2}
   - {fileID: 11400000, guid: a2ce416a8433cc64589430eeb5ef299d, type: 2}
   recipeWindow: {fileID: 0}
+  craftRecipeListContent: {fileID: 0}
+  craftItemPrefab: {fileID: 5939437271227184718, guid: d2918cb8aeb1bac4fb734945250eae10, type: 3}
+  reqItemList: {fileID: 0}
+  buttonGroup: {fileID: 0}
+  icon: {fileID: 0}
+  quantityText: {fileID: 0}
+  useButton: {fileID: 0}
+  dialog: {fileID: 0}
+  dialogText: {fileID: 0}
 --- !u!114 &7578668482342650803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curEquip: {fileID: 0}
   equipParent: {fileID: 6342678658828195853}
-  ArrowSpawnPosition: {fileID: 0}
+  ArrowSpawnObject: {fileID: 1364507912947388834}
 --- !u!136 &9162710315072646708
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -454,13 +465,13 @@ MonoBehaviour:
     m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: f547f8b68552b77419b935e427ec2d29, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1803283960725641867}
+        m_TargetAssemblyTypeName: CraftManager, Assembly-CSharp
+        m_MethodName: OnCraftButton
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

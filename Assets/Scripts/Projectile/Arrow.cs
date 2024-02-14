@@ -36,13 +36,17 @@ public class Arrow : Projectile
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);
     }
-    
+
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Animal"))
+        if (other.CompareTag("Animal"))
         {
-            other.GetComponent<AnimalController>().TakePhysicalDamage(projectile_Damage);
+            AnimalController animalController = other.GetComponent<AnimalController>();
+
+            if (animalController != null)
+                other.GetComponent<AnimalController>().TakePhysicalDamage(projectile_Damage);
+            else { other.GetComponent<Crow>().TakePhysicalDamage(projectile_Damage); }
         }
     }
 }
