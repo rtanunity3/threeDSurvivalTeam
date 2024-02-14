@@ -12259,6 +12259,58 @@ PrefabInstance:
       propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1783923310}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 6494891325362513190}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: dialog
+      value: 
+      objectReference: {fileID: 3997358838831180674}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: useButton
+      value: 
+      objectReference: {fileID: 4452464195203661110}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 8978848712030781623}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: buttonGroup
+      value: 
+      objectReference: {fileID: 3955260695509110791}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: reqItemList
+      value: 
+      objectReference: {fileID: 361092867391658972}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: quantityText
+      value: 
+      objectReference: {fileID: 1230657143637812930}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: recipeWindow
+      value: 
+      objectReference: {fileID: 5778923917752444076}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: craftItemPrefab
+      value: 
+      objectReference: {fileID: 5939437271227184718, guid: d2918cb8aeb1bac4fb734945250eae10, type: 3}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: craftRecipeListContent
+      value: 
+      objectReference: {fileID: 2993148922392955473}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: craftDataList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: craftDataList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 48a3da142d7c5b548993057c9ebcc492, type: 2}
+    - target: {fileID: 1803283960725641867, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
+      propertyPath: craftDataList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a2ce416a8433cc64589430eeb5ef299d, type: 2}
     - target: {fileID: 2135958392023107557, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
       propertyPath: m_Name
       value: Player
