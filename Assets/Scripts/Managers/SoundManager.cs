@@ -12,7 +12,12 @@ public enum EffectSound
     JDThanks,
     JDHardWork,
     SwordAttack,
-    AxeSwing
+    AxeSwing,
+    AxeWood,
+    AxeStone,
+    AnimalHit,
+    Inventory_Open,
+    Eat
 }
 
 public class SoundManager : MonoBehaviour

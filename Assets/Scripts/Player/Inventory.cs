@@ -84,6 +84,9 @@ public class Inventory : MonoBehaviour
     {
         if (callbackContext.phase == InputActionPhase.Started)
         {
+            if (!inventoryWindow.activeSelf)
+                SoundManager.instacne.PlayEffectSound(EffectSound.Inventory_Open);
+
             Toggle();
         }
     }
@@ -223,6 +226,7 @@ public class Inventory : MonoBehaviour
 
     public void OnUseButton()
     {
+        SoundManager.instacne.PlayEffectSound(EffectSound.Eat);
         if (selectedItem.item.type == ItemType.Consumable)
         {
             for (int i = 0; i < selectedItem.item.consumables.Length; i++)

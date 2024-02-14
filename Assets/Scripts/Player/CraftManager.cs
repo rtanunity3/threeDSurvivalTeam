@@ -97,6 +97,9 @@ public class CraftManager : MonoBehaviour
     {
         if (callbackContext.phase == InputActionPhase.Started && !dialog.activeInHierarchy)
         {
+            if (!recipeWindow.activeSelf)
+                SoundManager.instacne.PlayEffectSound(EffectSound.Inventory_Open);
+
             Toggle();
         }
     }

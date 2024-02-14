@@ -20,6 +20,8 @@ public class Crow : MonoBehaviour, IDamagable
    
     public void TakePhysicalDamage(int damageAmount)
     {
+        SoundManager.instacne.PlayEffectSound(EffectSound.AnimalHit);
+
         health -= damageAmount;
         if (health <= 0)
             Die();
