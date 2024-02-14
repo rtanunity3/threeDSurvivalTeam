@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -5,8 +9,6 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public GameObject playerObject;
-
-    public int UIDepth;
 
     private void Awake()
     {
@@ -20,4 +22,5 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }

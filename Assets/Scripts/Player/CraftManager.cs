@@ -95,7 +95,7 @@ public class CraftManager : MonoBehaviour
 
     public void OnCraftButton(InputAction.CallbackContext callbackContext)
     {
-        if (callbackContext.phase == InputActionPhase.Started)
+        if (callbackContext.phase == InputActionPhase.Started && !dialog.activeInHierarchy)
         {
             Toggle();
         }
