@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.XR;
 
 public enum EffectSound
 {
     BowString,
     BowFire,
-    BowHit
+    BowHit,
+    JDThanks,
+    JDHardWork,
+    SwordAttack
 }
 
 public class SoundManager : MonoBehaviour
@@ -47,5 +51,20 @@ public class SoundManager : MonoBehaviour
     public void PlayEffectSound(EffectSound effectSound)
     {
         effectAudioSource.PlayOneShot(effectClips[(int)effectSound]);
+    }
+
+    public void PlayJDKillSound()
+    {
+        int rand = Random.Range(0, 2);
+
+        switch (rand)
+        {
+            case 0:
+                PlayEffectSound(EffectSound.JDThanks);
+                break;
+            case 1:
+                PlayEffectSound(EffectSound.JDHardWork);
+                break;
+        }
     }
 }

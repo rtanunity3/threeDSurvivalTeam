@@ -80,12 +80,11 @@ public class Arrow : Projectile
     {
         if (other.CompareTag("Animal"))
         {
-            AnimalController animalController = other.GetComponent<AnimalController>();
+            var target = other.GetComponent<IDamagable>();
             SoundManager.instacne.PlayEffectSound(EffectSound.BowHit);
 
-            if (animalController != null)
-                other.GetComponent<AnimalController>().TakePhysicalDamage(projectile_Damage);
-            else { other.GetComponent<Crow>().TakePhysicalDamage(projectile_Damage); }
+            if (target != null)
+                target.TakePhysicalDamage(projectile_Damage);
         }
 
         if (other.CompareTag("Ground"))

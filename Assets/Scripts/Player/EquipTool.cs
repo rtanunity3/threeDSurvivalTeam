@@ -61,6 +61,11 @@ public class EquipTool : Equip
             }
         }
     }
+
+    public void PlayUseEffectSound(EffectSound effectSound)
+    {
+        SoundManager.instacne.PlayEffectSound(effectSound);
+    }
 }
     
 

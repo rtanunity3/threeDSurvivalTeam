@@ -29,6 +29,8 @@ public class Crow : MonoBehaviour, IDamagable
 
     void Die()
     {
+        SoundManager.instacne.PlayJDKillSound();
+
         for (int x = 0; x < dropOnDeath.Length; x++)
         {
             Instantiate(dropOnDeath[x].dropPrefab, transform.position + Vector3.up * 2, Quaternion.identity);
