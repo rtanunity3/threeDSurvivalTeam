@@ -20,8 +20,9 @@ public class PoolManager : MonoBehaviour
     [SerializeField]
     private ObjectInfo[] objectInfos = null;
 
-    [SerializeField]
-    private GameObject[] TreePrefab;
+    [HideInInspector]
+    public Queue<GameObject> TreePrefabQ = new Queue<GameObject>();
+    private float repeatInterval = 10.0f;
 
     private Dictionary<string, IObjectPool<PoolAble>> ojbectPoolDic = new Dictionary<string, IObjectPool<PoolAble>>();
 
@@ -38,6 +39,11 @@ public class PoolManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        InvokeRepeating("RespawnTree", 0, repeatInterval);
     }
 
     private void InitObjectPool()
@@ -96,4 +102,15 @@ public class PoolManager : MonoBehaviour
 
         return ojbectPoolDic[objectName].Get();
     }
+
+    
+    private void RespawnTree()
+    {
+        if (TreePrefabQ.Count > 0)
+        {
+            GameObject tree = TreePrefabQ.Dequeue();
+            tree.gameObject.SetActive(true);
+        }
+    }
 }
+
