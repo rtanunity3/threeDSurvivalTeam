@@ -1,11 +1,7 @@
-using System;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-
-
 
 public class CraftManager : MonoBehaviour
 {
@@ -99,7 +95,7 @@ public class CraftManager : MonoBehaviour
 
     public void OnCraftButton(InputAction.CallbackContext callbackContext)
     {
-        if (callbackContext.phase == InputActionPhase.Started)
+        if (callbackContext.phase == InputActionPhase.Started && !dialog.activeInHierarchy)
         {
             Toggle();
         }
@@ -112,12 +108,14 @@ public class CraftManager : MonoBehaviour
         {
             recipeWindow.SetActive(false);
             controller.ToggleCursor(false);
+            GameManager.instance.UIDepth--;
         }
-        else
+        else if (GameManager.instance.UIDepth == 0)
         {
             unSelect();
             recipeWindow.SetActive(true);
             controller.ToggleCursor(true);
+            GameManager.instance.UIDepth++;
         }
     }
 

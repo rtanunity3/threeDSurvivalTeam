@@ -20,6 +20,8 @@ public class Inventory : MonoBehaviour
     public ItemSlotUI[] uiSlots;
     public ItemSlot[] slots;
 
+    public ItemData[] initItem;
+
     public GameObject inventoryWindow;
     public Transform dropPosition;
 
@@ -67,6 +69,15 @@ public class Inventory : MonoBehaviour
         }
 
         ClearSelectItemWindow();
+        Init();
+    }
+
+    private void Init()
+    {
+        foreach (var item in initItem)
+        {
+            AddItem(item);
+        }
     }
 
     public void OnInventoryButton(InputAction.CallbackContext callbackContext)
@@ -84,12 +95,14 @@ public class Inventory : MonoBehaviour
             inventoryWindow.SetActive(false);
             onCloseInventory?.Invoke();
             controller.ToggleCursor(false);
+            GameManager.instance.UIDepth--;
         }
-        else
+        else if (GameManager.instance.UIDepth == 0)
         {
             inventoryWindow.SetActive(true);
             onOpenInventory?.Invoke();
             controller.ToggleCursor(true);
+            GameManager.instance.UIDepth++;
         }
     }
 
