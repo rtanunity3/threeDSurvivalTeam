@@ -138,10 +138,10 @@ public class PoolManager : MonoBehaviour
     {
 
         int createNum = Random.Range(1, 4);
-
-        for (int i = 0; i < createNum; ++i)
+        Debug.LogWarning(createNum);
+        for (int i = 0; i < createNum; i++)
         {
-            Vector3 randomPosition = (Random.onUnitSphere + centerPos) * spawnRadius;
+            Vector3 randomPosition = Random.onUnitSphere * spawnRadius + centerPos;
             randomPosition.y = 100f;
 
             GameObject animal = animals[Random.Range(0, animals.Length)].prefab;
@@ -151,7 +151,12 @@ public class PoolManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 randomPosition.y = hit.point.y;
+                Debug.LogWarning("CreateAnimal " + randomPosition);
                 Instantiate(animal, randomPosition, Quaternion.identity);
+            }
+            else
+            {
+                Debug.LogWarning("Not Hit" + randomPosition);
             }
         }
     }
