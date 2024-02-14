@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Pool;
 
 public enum ItemIndex
 {
@@ -25,7 +24,7 @@ public class BowController : Equip
 
     private void Awake()
     {
-        inventroyScript = GameManager.Instance.playerObject.GetComponent<Inventory>();
+        inventroyScript = GameManager.instance.playerObject.GetComponent<Inventory>();
         animator = GetComponent<Animator>();
     }
 
