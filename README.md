@@ -26,6 +26,9 @@ Visual Studio Community 2022
 ## 개발인원
 권순성, 금경희, 이상민, 황문규
 
+### 작업 내용
+![image](https://github.com/masterkeum/threeDSurvivalTeam/assets/88172590/96fb2387-4cc1-493a-9d09-46d3a7113558)
+
 ## 사용 에셋
 
 ### UI
@@ -65,7 +68,22 @@ https://jdsherbert.itch.io/ambiences-music-pack
 ![image](https://github.com/masterkeum/threeDSurvivalTeam/assets/88172590/bbcb0699-4ffd-44f2-8568-278b9f2721bd)
 
 
+## 깃 컨벤션
+### Git Comment : Feat 내용
 
+| 태그 이름 | 설명 |
+| --- | --- |
+| Feat | 새로운 기능을 추가한 경우 |
+| Fix | 버그를 고친 경우 |
+| Design | UI 디자인 변경 |
+| Style | 코드 포맷 변경, 세미 콜론 누락 등 코드 수정이 없는 경우 |
+| Refactor | 프로덕션 코드 리팩토링 |
+| Comment | 필요한 주석 추가 및 변경 |
+| Docs | 문서를 수정한 경우 |
+| Test | 테스트 추가, 테스트 리팩토링(프로덕션 코드 변경 X) |
+| Chore | 빌드 테스트 업데이트, 패키지 매니저를 설정하는 경우(프로덕션 코드 변경 X) |
+| Rename | 파일 혹은 포럼명을 수정하거나 옮기는 작업만인 경우 |
+| Remove | 파일을 삭제하는 작업만 수행한 경우 |
 
 
 
