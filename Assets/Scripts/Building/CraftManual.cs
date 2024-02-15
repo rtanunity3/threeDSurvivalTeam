@@ -30,6 +30,8 @@ public class CraftManual : MonoBehaviour
 
     [SerializeField]
     private Craft[] craft_build;  // 건축용 탭
+    [SerializeField]
+    private Craft[] fire_build;  // 불 탭
 
     // 필요한 UI Slot 요소
     [SerializeField]
@@ -72,6 +74,9 @@ public class CraftManual : MonoBehaviour
             case 0:
                 craft_SelectedTab = craft_build;
                 break;
+            case 1:
+                craft_SelectedTab = fire_build;
+                break;
         }
         TabSlotSetting();
     }
@@ -100,6 +105,7 @@ public class CraftManual : MonoBehaviour
 
             for (int j = 0; j < craft_SelectedTab[i].craftNeedItem.Length; j++)
             {
+                text_SlotNeedItem[slotIndex].text = "";
                 text_SlotNeedItem[slotIndex].text += craft_SelectedTab[i].craftNeedItem[j].reqItem.displayName;
                 text_SlotNeedItem[slotIndex].text += " x " + craft_SelectedTab[i].craftNeedItem[j].reqItemCnt + "\n";
             }
