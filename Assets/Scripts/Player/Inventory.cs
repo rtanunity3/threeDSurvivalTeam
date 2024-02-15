@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using TMPro.EditorUtilities;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -336,6 +337,21 @@ public class Inventory : MonoBehaviour
             }
         }
         AddItem(craftItem.targetItem, craftItem.resultCnt);
+        UpdateUI();
+    }
+
+    public void BuildItemRemove(RequireItem[] reqItem)
+    {
+        foreach (RequireItem requireItem in reqItem)
+        {
+            ItemSlot slot = GetItemStack(requireItem.reqItem);
+            slot.quantity -= requireItem.reqItemCnt;
+            if (slot.quantity <= 0)
+            {
+                // TODO : 재료 0 처리
+                slot.item = null;
+            }
+        }
         UpdateUI();
     }
 
