@@ -4079,7 +4079,7 @@ PrefabInstance:
       objectReference: {fileID: 469051088}
     - target: {fileID: 8300303141254736908, guid: 77ca6b39f08cd2547b07868641294754, type: 3}
       propertyPath: craft_build.Array.data[0].craftNeedItem.Array.data[0].reqItemCnt
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8377583708934843956, guid: 77ca6b39f08cd2547b07868641294754, type: 3}
       propertyPath: m_Pivot.x
