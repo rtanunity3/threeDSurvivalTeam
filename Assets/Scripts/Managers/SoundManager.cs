@@ -17,7 +17,8 @@ public enum EffectSound
     AxeStone,
     AnimalHit,
     Inventory_Open,
-    Eat
+    Eat,
+    Cook
 }
 
 public class SoundManager : MonoBehaviour
