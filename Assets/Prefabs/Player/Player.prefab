@@ -107,7 +107,7 @@ Transform:
   - {fileID: 8700142680783433598}
   - {fileID: 6915865109082298236}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2303008549956934617
 MonoBehaviour:
@@ -137,6 +137,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   slots: []
+  initItem:
+  - {fileID: 11400000, guid: 30282bd67be014274986bf9a0db0f54f, type: 2}
   inventoryWindow: {fileID: 0}
   dropPosition: {fileID: 6915865109082298236}
   selectedItemName: {fileID: 0}
@@ -170,6 +172,8 @@ MonoBehaviour:
   craftDataList:
   - {fileID: 11400000, guid: 48a3da142d7c5b548993057c9ebcc492, type: 2}
   - {fileID: 11400000, guid: a2ce416a8433cc64589430eeb5ef299d, type: 2}
+  - {fileID: 11400000, guid: b209586bee9a67847898601074f29c2a, type: 2}
+  - {fileID: 11400000, guid: fe568abde242e564b966cbc987f563d8, type: 2}
   recipeWindow: {fileID: 0}
   craftRecipeListContent: {fileID: 0}
   craftItemPrefab: {fileID: 5939437271227184718, guid: d2918cb8aeb1bac4fb734945250eae10, type: 3}
