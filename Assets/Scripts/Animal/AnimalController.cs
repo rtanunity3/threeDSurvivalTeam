@@ -231,6 +231,7 @@ public class AnimalController : PoolAble, IDamagable
         while (GetDestinationAngle(hit.position) > 90 || playerDistance < safeDistance)
         {
             NavMesh.SamplePosition(transform.position + (Random.onUnitSphere * Random.Range(minWanderDistance, maxWanderDistance)), out hit, maxWanderDistance, NavMesh.AllAreas);
+
             i++;
             if (i == 30)
                 break;
