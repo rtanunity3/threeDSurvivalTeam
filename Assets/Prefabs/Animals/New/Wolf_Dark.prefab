@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4027717225687753746}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ L UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1564225390204443871}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ L Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7156518208845604625}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ L Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4452436245373228155}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Tail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3315470655118035751}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ L Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8492868946161612643}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,9 +205,9 @@ GameObject:
   - component: {fileID: 7765513386210837788}
   - component: {fileID: 3803587794354442998}
   - component: {fileID: 6522072441866324002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_Dark
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -351,7 +351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4570800563392800990}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2191803409355432444}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ L HorseLink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2229468293411433764}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ L Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2761477254358518442}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ L Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1908649795670974851}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ R Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 973675592176334200}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Tail4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3180324632032273555}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Neck2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5541643217278682428}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ R Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3533883745023471621}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_Wolf_LodGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4040683956347012289}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,7 +678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6202534057497914003}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ R UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1611596376350698535}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ L Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2551979426968114155}
   - component: {fileID: 8557637401814419988}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_Wolf_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -861,7 +861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8459983255879894065}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -894,7 +894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 961088994919503470}
   - component: {fileID: 1006869811876003816}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_Wolf_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7531408812955654292}
   - component: {fileID: 590150090734720269}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_Wolf_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1131,7 +1131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3542456702920542215}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ L Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1163,7 +1163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7522921662959195672}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4474905159372595932}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ R HorseLink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1227,7 +1227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7181056104213960423}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Tail5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1258,7 +1258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3802201294839325950}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1290,7 +1290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 860682356336595036}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Tail3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1322,7 +1322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1997686330571792204}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Ponytail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1353,7 +1353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6004527818026884844}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ R Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1385,7 +1385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1908689705179543258}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ R Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1418,7 +1418,7 @@ GameObject:
   - component: {fileID: 4369503510170040717}
   - component: {fileID: 7612814944685539222}
   - component: {fileID: 3251601621174578691}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_Wolf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1503,7 +1503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7879493990071010376}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Neck1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1535,7 +1535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3859882255883393890}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ R Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1567,7 +1567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4043410223400603219}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1599,7 +1599,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3109176621935083337}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Tail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1631,7 +1631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7500894289825395825}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1663,7 +1663,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7312001823520257408}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ R Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1694,7 +1694,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 358960620028471238}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1727,7 +1727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4677069459852284558}
   - component: {fileID: 6013107295198027652}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_Wolf_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1845,7 +1845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4757300422136139650}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wolf_ R Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
