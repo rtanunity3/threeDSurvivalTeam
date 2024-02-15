@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,12 +6,12 @@ using UnityEngine.UI;
 public class Craft
 {
     public string craftName; // 이름
+    public string prefabName; // 프리팹 이름
     public Sprite craftImage; // 이미지
     public string craftDescription; // 설명
-    public string[] craftNeedItem;  // 필요한 아이템
-    public int[] craftNeedItemCount; // 필요한 아이템의 개수
-    public GameObject go_prefab; // 실제 설치 될 프리팹
-    public GameObject go_PreviewPrefab; // 미리 보기 프리팹
+    //public string[] craftNeedItem;  // 필요한 아이템
+    public RequireItem[] craftNeedItem;
+    //public int[] craftNeedItemCount; // 필요한 아이템의 개수
 }
 
 public class CraftManual : MonoBehaviour
@@ -25,6 +26,7 @@ public class CraftManual : MonoBehaviour
     private int page = 1; // 탭 페이지
     private int selectedSlotNumber;
     private Craft[] craft_SelectedTab;
+    private Craft selectedCraft;
 
     [SerializeField]
     private Craft[] craft_build;  // 건축용 탭
@@ -35,11 +37,11 @@ public class CraftManual : MonoBehaviour
     [SerializeField]
     private Image[] image_Slot;
     [SerializeField]
-    private Text[] text_SlotName;
+    private TMP_Text[] text_SlotName;
     [SerializeField]
-    private Text[] text_SlotDescription;
+    private TMP_Text[] text_SlotDescription;
     [SerializeField]
-    private Text[] text_SlotNeedItem;
+    private TMP_Text[] text_SlotNeedItem;
 
     private GameObject currentPreview; // 현재 미리보기 프리팹
     private GameObject currentPrefab; // 현재 생성될 프리팹
@@ -52,6 +54,8 @@ public class CraftManual : MonoBehaviour
     private LayerMask layerMask;
     [SerializeField]
     private float range;
+    [SerializeField]
+    private GameObject buildFailUI;
 
     void Start()
     {
@@ -96,37 +100,34 @@ public class CraftManual : MonoBehaviour
 
             for (int j = 0; j < craft_SelectedTab[i].craftNeedItem.Length; j++)
             {
-                text_SlotNeedItem[slotIndex].text += craft_SelectedTab[i].craftNeedItem[j];
-                text_SlotNeedItem[slotIndex].text += " x " + craft_SelectedTab[i].craftNeedItemCount[j] + "\n";
+                text_SlotNeedItem[slotIndex].text += craft_SelectedTab[i].craftNeedItem[j].reqItem.displayName;
+                text_SlotNeedItem[slotIndex].text += " x " + craft_SelectedTab[i].craftNeedItem[j].reqItemCnt + "\n";
             }
         }
     }
-    /*
-    private void ClearSlot()
-    {
-        for (int i = 0; i < go_Slots.Length; i++)
-        {
-            image_Slot[i].sprite = null;
-            text_SlotName[i].text = "";
-            text_SlotDescription[i].text = "";
-            text_SlotNeedItem[i].text = "";
-            go_Slots[i].SetActive(false);
-        }
-    }
-    */
+
     public void SlotClick(int slotNumber)
     {
         selectedSlotNumber = slotNumber + (page - 1) * go_Slots.Length;
-        Craft selectedCraft = craft_SelectedTab[selectedSlotNumber];
+        selectedCraft = craft_SelectedTab[selectedSlotNumber];
+
+        // 아이템 충분한지 체크
+        if (Inventory.instance.CheckCraftRequireItem(selectedCraft.craftNeedItem) == false)
+        {
+            buildFailUI.SetActive(true);
+            return;
+        }
+
+
         // ResourceManager 인스턴스를 사용하여 프리팹 인스턴스화
-        GameObject previewPrefab = ResourceManager.Instance.Load<GameObject>($"Prefabs/{selectedCraft.go_PreviewPrefab.name}");
+        GameObject previewPrefab = ResourceManager.Instance.Load<GameObject>($"Prefabs/Preview/{selectedCraft.prefabName}");
         if (previewPrefab != null)
         {
             currentPreview = ResourceManager.Instance.Instantiate(previewPrefab);
             currentPreview.transform.position = playerTransform.position + playerTransform.forward;
             currentPreview.transform.rotation = Quaternion.identity;
         }
-        GameObject prefab = ResourceManager.Instance.Load<GameObject>($"Prefabs/{selectedCraft.go_prefab.name}");
+        GameObject prefab = ResourceManager.Instance.Load<GameObject>($"Prefabs/{selectedCraft.prefabName}");
         if (prefab != null)
         {
             currentPrefab = prefab;
@@ -171,34 +172,15 @@ public class CraftManual : MonoBehaviour
             {
                 currentPreview.transform.position = hitInfo.point;
             }
-            else
-            {
-                // 지면을 찾지 못한 경우, 처리 로직
-                // 예: 프리뷰를 숨기거나, 사용자에게 알림 등
-            }
         }
-
-        /*
-        float forwardDistance = 10.0f; // 캐릭터로부터 앞으로 얼마나 떨어뜨릴지 결정하는 거리
-        float sphereRadius = 0.5f; // SphereCast의 반지름
-        Vector3 castStartPosition = playerTransform.position + Vector3.up + (playerTransform.forward * forwardDistance);
-        if (Physics.SphereCast(castStartPosition, sphereRadius, Vector3.down, out hitInfo, range + 1, layerMask))
-        {
-            currentPreview.transform.position = hitInfo.point;
-        }
-
-        /*
-        if (Physics.Raycast(playerTransform.position, playerTransform.forward, out hitInfo, range, layerMask))
-        {
-            currentPreview.transform.position = hitInfo.point;
-        }
-        */
     }
 
     private void Build()
     {
         if (isPreviewActive && currentPreview.GetComponent<PreviewObject>().isBuildable())
         {
+            // 아이템 삭제
+            Inventory.instance.BuildItemRemove(selectedCraft.craftNeedItem);
             Instantiate(currentPrefab, hitInfo.point, currentPreview.transform.rotation);
             ResetCraftingProcess();
         }
