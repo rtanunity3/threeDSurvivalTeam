@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7169851670832727030}
-  - component: {fileID: -5209523220368972921}
+  - component: {fileID: 2001107738366426126}
   m_Layer: 0
   m_Name: Fire
-  m_TagString: Untagged
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,18 +33,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5209523220368972921
-MonoBehaviour:
+--- !u!65 &2001107738366426126
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087906270423342202}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e30d41b4d0cfea84ba3e50aaa2272ba5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 3
+  m_Size: {x: 3, y: 2, z: 3}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &951176106861599059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53,6 +62,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7169851670832727030}
     m_Modifications:
+    - target: {fileID: 501295248461903500, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 501295248461903503, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 7847464194603258462, guid: 7b08235ff3d60de4c819f9ce4e582a71, type: 3}
+    - target: {fileID: 501295248461903503, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
+      propertyPath: LightsModule.range
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 501295248461903503, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
+      propertyPath: LightsModule.ratio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 501295248461903503, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
+      propertyPath: LightsModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 501295248461903503, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
+      propertyPath: LightsModule.rangeCurve.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 501295248461903503, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
+      propertyPath: LightsModule.intensityCurve.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 501295248461903503, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
+      propertyPath: LightsModule.rangeCurve.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 501295248461903503, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
+      propertyPath: LightsModule.intensityCurve.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 501295248943222296, guid: d6a5e2c4aefa6804b8f7d2af9a9676b5, type: 3}
       propertyPath: m_Name
       value: CampFire

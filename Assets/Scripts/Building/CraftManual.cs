@@ -103,9 +103,9 @@ public class CraftManual : MonoBehaviour
             text_SlotName[slotIndex].text = craft_SelectedTab[i].craftName;
             text_SlotDescription[slotIndex].text = craft_SelectedTab[i].craftDescription;
 
+            text_SlotNeedItem[slotIndex].text = "";
             for (int j = 0; j < craft_SelectedTab[i].craftNeedItem.Length; j++)
             {
-                text_SlotNeedItem[slotIndex].text = "";
                 text_SlotNeedItem[slotIndex].text += craft_SelectedTab[i].craftNeedItem[j].reqItem.displayName;
                 text_SlotNeedItem[slotIndex].text += " x " + craft_SelectedTab[i].craftNeedItem[j].reqItemCnt + "\n";
             }

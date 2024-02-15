@@ -1781,6 +1781,8 @@ MonoBehaviour:
     craftNeedItem:
     - reqItem: {fileID: 11400000, guid: 77b885e956f72492ab8514fb068f6b91, type: 2}
       reqItemCnt: 5
+    - reqItem: {fileID: 11400000, guid: cfed281451436478fa4b0ad4129e9dd6, type: 2}
+      reqItemCnt: 3
   go_Slots:
   - {fileID: 8364989383281606316}
   - {fileID: 387303996781772598}

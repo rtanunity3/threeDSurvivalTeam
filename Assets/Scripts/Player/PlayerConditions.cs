@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -45,6 +46,7 @@ public class PlayerConditions : MonoBehaviour, IDamagable
 
     public UnityEvent onTakeDamage;
     public DayNightCycle dayNightCycle; // DayNightCycle 클래스 참조
+    private bool inFire;
 
     // Start is called before the first frame update
     void Start()
@@ -116,11 +118,27 @@ public class PlayerConditions : MonoBehaviour, IDamagable
         {
             float timeOfNight = dayNightCycle.time;
 
-            if (timeOfNight <= 0.2f || timeOfNight >= 0.8f)
+            if (!inFire && (timeOfNight <= 0.2f || timeOfNight >= 0.8f))
             {
                 //Debug.Log(timeOfNight);
                 temperature.Substract(0.01f);
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Fire"))
+        {
+            inFire = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Fire"))
+        {
+            inFire = false;
         }
     }
 }
