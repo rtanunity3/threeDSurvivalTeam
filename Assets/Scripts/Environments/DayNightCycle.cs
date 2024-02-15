@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DayNightCycle : MonoBehaviour
 {
+    public Image fadeImage;
+    private float fadeSpeed = 1.0f;
+
     [Range(0.0f, 1.0f)]
     public float time; // 하루를 몇분으로 할건지
     public float fullDayLength;
@@ -55,5 +59,27 @@ public class DayNightCycle : MonoBehaviour
             go.SetActive(false);
         else if (lightSource.intensity > 0 && !go.activeInHierarchy)
             go.SetActive(true);
+    }
+
+    public void Sleep()
+    {
+        StartCoroutine(FadeInAndOut());
+    }
+
+    IEnumerator FadeInAndOut()
+    {
+        for (float i = 0; i <= 1; i += Time.deltaTime * fadeSpeed)
+        {
+            fadeImage.color = new Color(0, 0, 0, i);
+            yield return null;
+        }
+
+        for (float i = 1; i >= 0; i -= Time.deltaTime * fadeSpeed)
+        {
+            fadeImage.color = new Color(0, 0, 0, i);
+            yield return null;
+        }
+
+        time = 0.2f;
     }
 }
