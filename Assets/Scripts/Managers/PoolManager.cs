@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering;
+using UnityEngine.AI;
 using UnityEngine.Pool;
 
 [System.Serializable]
@@ -141,23 +141,38 @@ public class PoolManager : MonoBehaviour
         Debug.LogWarning(createNum);
         for (int i = 0; i < createNum; i++)
         {
-            Vector3 randomPosition = Random.onUnitSphere * spawnRadius + centerPos;
-            randomPosition.y = 100f;
-
             GameObject animal = animals[Random.Range(0, animals.Length)].prefab;
 
+            // 랜덤 위치에서 가장 가까운 Navmesh위 유효 위치를 탐색
+            Vector3 randomPosition = Random.onUnitSphere * spawnRadius + centerPos;
+            randomPosition.y = 100f;
             Ray ray = new Ray(randomPosition, Vector3.down);
             RaycastHit hit;
+            NavMeshHit navhit;
+
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                randomPosition.y = hit.point.y;
-                Debug.LogWarning("CreateAnimal " + randomPosition);
-                Instantiate(animal, randomPosition, Quaternion.identity);
+                if (NavMesh.SamplePosition(hit.point, out navhit, spawnRadius, NavMesh.AllAreas))
+                {
+                    Instantiate(animal, navhit.position, Quaternion.identity);
+                }
             }
-            else
-            {
-                Debug.LogWarning("Not Hit" + randomPosition);
-            }
+
+            // 위에서 레이쏘는 방식
+            //Vector3 randomPosition = Random.onUnitSphere * spawnRadius + centerPos;
+            //randomPosition.y = 100f;
+            //Ray ray = new Ray(randomPosition, Vector3.down);
+            //RaycastHit hit;
+            //if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            //{
+            //    randomPosition.y = hit.point.y;
+            //    Debug.LogWarning("CreateAnimal " + randomPosition);
+            //    Instantiate(animal, randomPosition, Quaternion.identity);
+            //}
+            //else
+            //{
+            //    Debug.LogWarning("Not Hit" + randomPosition);
+            //}
         }
     }
 }

@@ -794,84 +794,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8718235454060957295, guid: 5ff1745cae6acca41b52a9309981b7d4, type: 3}
   m_PrefabInstance: {fileID: 7559347368760012467}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &491304891
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 491304893}
-  - component: {fileID: 491304892}
-  m_Layer: 0
-  m_Name: PoolManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &491304892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491304891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f605253ca600348b1ae381c18ae57a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile:
-  - objectName: Projectile_Arrow
-    prefab: {fileID: 7078025699278178617, guid: 1e064f3e203f7154f8f62950aec62b35, type: 3}
-    defaultCapacity: 3
-    maxSize: 10
-  animals:
-  - objectName: Wolf_Dark
-    prefab: {fileID: 8080992133685848900, guid: e6247f8fec9a1b8489f0baf2aba78df1, type: 3}
-    defaultCapacity: 1
-    maxSize: 5
-  - objectName: Wolf_Base
-    prefab: {fileID: 2539572266753345197, guid: 9b98eca47dbbcc344b8726468d9d8e07, type: 3}
-    defaultCapacity: 1
-    maxSize: 5
-  - objectName: Wolf_Arctic
-    prefab: {fileID: 8762983305039812997, guid: 3cd0621b7cbfe2e4baf2b65579af8aa2, type: 3}
-    defaultCapacity: 1
-    maxSize: 5
-  - objectName: SK_DeerStag
-    prefab: {fileID: 386460081639523482, guid: 9a9d6b853bb37ab439f71050cb611b85, type: 3}
-    defaultCapacity: 1
-    maxSize: 5
-  - objectName: SK_DeerDoe
-    prefab: {fileID: 7914940646799923894, guid: b8456a6f5a79fde44a69d3bccaa65cb5, type: 3}
-    defaultCapacity: 1
-    maxSize: 5
-  - objectName: Crow
-    prefab: {fileID: 4892517805173132322, guid: 69afafcce5de4124f941c31c96caa366, type: 3}
-    defaultCapacity: 1
-    maxSize: 10
-  - objectName: Bear
-    prefab: {fileID: 5847017375198713086, guid: 6b7cacee3e1e4444e8c43cc3cacdd870, type: 3}
-    defaultCapacity: 1
-    maxSize: 2
---- !u!4 &491304893
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491304891}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7355728, y: 2.0968494, z: 5.307852}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &590547166
 GameObject:
   m_ObjectHideFlags: 0
@@ -9758,6 +9680,67 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &4994997622004875753
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2067493825189045201, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067493825189045201, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.7355728
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067493825189045201, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0968494
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067493825189045201, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.307852
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067493825189045201, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067493825189045201, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067493825189045201, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067493825189045201, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067493825189045201, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067493825189045201, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067493825189045201, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488255193331511414, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
+      propertyPath: m_Name
+      value: PoolManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9bdb270dd36939b4ba2b20e9037f0fcb, type: 3}
 --- !u!224 &5083358063769744226
 RectTransform:
   m_ObjectHideFlags: 0
