@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8488255193331511414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067493825189045201}
+  - component: {fileID: 3436986280503050833}
+  m_Layer: 0
+  m_Name: PoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2067493825189045201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8488255193331511414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.7355728, y: 2.0968494, z: 5.307852}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3436986280503050833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8488255193331511414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f605253ca600348b1ae381c18ae57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile:
+  - objectName: Projectile_Arrow
+    prefab: {fileID: 7078025699278178617, guid: 1e064f3e203f7154f8f62950aec62b35, type: 3}
+    defaultCapacity: 3
+    maxSize: 10
+  animals:
+  - objectName: Wolf_Dark
+    prefab: {fileID: 1142272246480803141, guid: e94cf3c8c44027a4a91257eab77c0f77, type: 3}
+    defaultCapacity: 1
+    maxSize: 5
+  - objectName: Wolf_Base
+    prefab: {fileID: 7675816540551543643, guid: 9241af13b6abb6046b6168e7aa460bc4, type: 3}
+    defaultCapacity: 1
+    maxSize: 5
+  - objectName: Wolf_Arctic
+    prefab: {fileID: 1621131590725054683, guid: cb37983fa713ec24aaeeab4ce7498d7b, type: 3}
+    defaultCapacity: 1
+    maxSize: 5
+  - objectName: SK_DeerStag
+    prefab: {fileID: 7041232215139409778, guid: 0571f23d6eab7a14da2ff9592ee24084, type: 3}
+    defaultCapacity: 1
+    maxSize: 5
+  - objectName: SK_DeerDoe
+    prefab: {fileID: 2621887833901582526, guid: 81fefdf04ebcea04ebfc96504749f755, type: 3}
+    defaultCapacity: 1
+    maxSize: 5
+  - objectName: Crow
+    prefab: {fileID: 8894990186482415467, guid: a05c4b3832cd4864c9d0a1910ec8ae9f, type: 3}
+    defaultCapacity: 1
+    maxSize: 10
+  - objectName: Bear
+    prefab: {fileID: 5847017375198713086, guid: 6b7cacee3e1e4444e8c43cc3cacdd870, type: 3}
+    defaultCapacity: 1
+    maxSize: 2
