@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +5,8 @@ public class EquipManager : MonoBehaviour
 {
     public Equip curEquip;
     public Transform equipParent;
+    public GameObject ArrowSpawnObject;
+    
 
     // singleton
     public static EquipManager instance;

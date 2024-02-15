@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -41,10 +40,13 @@ public class PlayerConditions : MonoBehaviour, IDamagable
     public Condition health;
     public Condition hunger;
     public Condition stamina;
+    public Condition temperature;
 
     public float noHungerHealthDecay;
 
     public UnityEvent onTakeDamage;
+    public DayNightCycle dayNightCycle; // DayNightCycle 클래스 참조
+    private bool inFire;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +54,7 @@ public class PlayerConditions : MonoBehaviour, IDamagable
         health.curValue = health.startValue;
         hunger.curValue = hunger.startValue;
         stamina.curValue = stamina.startValue;
+        temperature.curValue = temperature.startValue;
     }
 
     // Update is called once per frame
@@ -63,12 +66,18 @@ public class PlayerConditions : MonoBehaviour, IDamagable
         if (hunger.curValue == 0.0f)
             health.Substract(noHungerHealthDecay * Time.deltaTime);
 
+        if (temperature.curValue == 0.0f)
+            health.Substract(noHungerHealthDecay * Time.deltaTime);
+
         if (health.curValue == 0.0f)
             Die();
 
         health.uiBar.fillAmount = health.GetPercentage();
         hunger.uiBar.fillAmount = hunger.GetPercentage();
         stamina.uiBar.fillAmount = stamina.GetPercentage();
+        temperature.uiBar.fillAmount = temperature.GetPercentage();
+
+        UpdatePlayerConditions();
     }
 
     public void Heal(float amount)
@@ -79,6 +88,7 @@ public class PlayerConditions : MonoBehaviour, IDamagable
     public void Eat(float amount)
     {
         hunger.Add(amount);
+        temperature.Add(amount);
     }
 
     public bool UseStamina(float amount)
@@ -93,12 +103,42 @@ public class PlayerConditions : MonoBehaviour, IDamagable
 
     public void Die()
     {
-        Debug.Log("플레이어 사망");
+        //Debug.Log("플레이어 사망");
     }
 
     public void TakePhysicalDamage(int damageAmount)
     {
         health.Substract(damageAmount);
         onTakeDamage?.Invoke();
+    }
+
+    public void UpdatePlayerConditions()
+    {
+        if (dayNightCycle != null)
+        {
+            float timeOfNight = dayNightCycle.time;
+
+            if (!inFire && (timeOfNight <= 0.2f || timeOfNight >= 0.8f))
+            {
+                //Debug.Log(timeOfNight);
+                temperature.Substract(0.01f);
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Fire"))
+        {
+            inFire = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Fire"))
+        {
+            inFire = false;
+        }
     }
 }
