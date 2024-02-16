@@ -13,6 +13,10 @@
 
 ![image](https://github.com/masterkeum/threeDSurvivalTeam/assets/88172590/90abd634-6fa1-4fbe-9959-e6f0a5734e91)
 
+▼ 누르면 유튜브로 페이지 이동  
+
+[![Video Label](http://img.youtube.com/vi/WUahPik0Lkk/0.jpg)](https://youtu.be/WUahPik0Lkk)
+
 
 ## 시작 씬
 PrologueScene  
