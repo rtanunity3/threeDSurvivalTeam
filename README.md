@@ -2,8 +2,9 @@
 1. [게임소개](#게임소개)
 2. [시작 씬](#시작-씬)
 3. [개발 인원 및 작업분배](#개발인원)
-4. [사용 에셋](#사용-에셋)  
-5. [스크린샷](#스크린샷)
+4. [사용 에셋](#사용-에셋)
+5. [소개영상](#소개영상)
+6. [스크린샷](#스크린샷)
 
 ## 게임소개
 - 프로젝트 명 : JD Survival (Jae Dragon Survival)
@@ -12,11 +13,6 @@
 ![image](https://github.com/masterkeum/threeDSurvivalTeam/assets/88172590/fbaaa77f-8519-4643-a271-177923501732)
 
 ![image](https://github.com/masterkeum/threeDSurvivalTeam/assets/88172590/90abd634-6fa1-4fbe-9959-e6f0a5734e91)
-
-▼ 누르면 유튜브로 페이지 이동  
-
-[![Video Label](http://img.youtube.com/vi/WUahPik0Lkk/0.jpg)](https://youtu.be/WUahPik0Lkk)
-
 
 ## 시작 씬
 PrologueScene  
@@ -56,6 +52,10 @@ https://www.unrealengine.com/marketplace/ko/product/17c2d7d545674204a7644c3c0c4c
 
 ### 사운드
 https://jdsherbert.itch.io/ambiences-music-pack
+
+## 소개영상
+▼ 누르면 유튜브로 페이지 이동  
+[![Video Label](http://img.youtube.com/vi/WUahPik0Lkk/0.jpg)](https://youtu.be/WUahPik0Lkk)
 
 ## 스크린샷
 ![image](https://github.com/masterkeum/threeDSurvivalTeam/assets/88172590/6240ff21-6933-45a3-8f33-1d473a522cef)
